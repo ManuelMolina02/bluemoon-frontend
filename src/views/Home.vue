@@ -10,137 +10,52 @@
     <div>
       <h1 class="title">{{ banner.title }}</h1>
     </div>
+    <br>
+    <br>
 
     <!-- CAROUSEL CONTAINER -->
     <div class="carousel-container d-flex">
-      <!--
-        PRIMARY -> CAROUSEL CONTAINER
-      -->
-            <b-carousel
+      <!-- PRIMARY -> CAROUSEL CONTAINE -->
+      <b-carousel
         class="carousel-content"
         style="text-shadow: 0px 0px 2px #000"
         no-animation
         indicators
-
       >
         <!-- CAROUSEL IMAGES -->
         <b-carousel-slide
           v-b-modal.primaryPublication
-          :img-src="carousel[0].urlImage"
+            v-for="mission in missions"
+            :key="mission.title"
+          :img-src="mission.url"
         >
+        <!--
           <b-modal id="primaryPublication" centered ok-only lazy>
             <p>
-              {{ carousel[0].title }}
+              {{ mission.title }}
 
               <b-button
-                v-b-popover="carousel[0].datePublication"
+                v-b-popover="mission.date"
                 title="Publication Date"
                 >learn more</b-button
               >
             </p>
           </b-modal>
+          -->
         </b-carousel-slide>
-
-        <b-carousel-slide v-b-modal.secondPublication :img-src="carousel[1].urlImage">
-          <b-modal id="secondPublication" centered ok-only lazy>
-            <p>
-              {{ carousel[1].title }}
-
-              <b-button
-                v-b-popover="carousel[1].datePublication"
-                title="Publication Date"
-                >learn more</b-button
-              >
-            </p>
-          </b-modal>
-        </b-carousel-slide>
-
-        <b-carousel-slide v-b-modal.thirdPublication :img-src="carousel[2].urlImage">
-          <b-modal id="thirdPublication" centered ok-only lazy>
-            <p>
-              {{ carousel[2].title }}
-
-              <b-button
-                v-b-popover="carousel[2].datePublication"
-                title="Publication Date"
-                >learn more</b-button
-              >
-            </p>
-          </b-modal>
-        </b-carousel-slide>
-
-      </b-carousel>
-
-      <!--
-        SECOND -> CAROUSEL CONTAINER
-      -->
-      <b-carousel
-        class="carousel-content"
-        style="text-shadow: 0px 0px 2px #000"
-        no-animation
-        indicators
-        v-b-modal.primaryModalPopover
-      >
-        <!-- MODAL CONTAINER -->
-        <b-modal id="primaryModalPopover" centered ok-only lazy>
-          <p>
-            segundo modal
-
-            <b-button v-b-popover="'oioioi!'" title="Publication Date"
-              >botão com tooltip</b-button
-            >
-          </p>
-
-          <p>
-            <a href="#" v-b-tooltip title="Tooltip in a modal!">Link</a>
-          </p>
-        </b-modal>
-
-        <!-- CAROUSEL CONTAINER -->
-        <b-carousel-slide :img-src="carousel[0].urlImage"></b-carousel-slide>
-        <b-carousel-slide :img-src="carousel[1].urlImage"></b-carousel-slide>
-        <b-carousel-slide :img-src="carousel[2].urlImage"></b-carousel-slide>
-      </b-carousel>
-
-      <!--
-        THIRD -> CAROUSEL CONTAINER
-      -->
-      <b-carousel
-        class="carousel-content"
-        style="text-shadow: 0px 0px 2px #000"
-        no-animation
-        indicators
-        v-b-modal.thirdModalPopover
-      >
-        <!-- MODAL CONTAINER -->
-        <b-modal id="thirdModalPopover" centered ok-only lazy>
-          <p>
-            terceiro modal
-
-            <b-button v-b-popover="'oioioi!'" title="uhuuuuuuuu"
-              >botão com tooltip</b-button
-            >
-          </p>
-
-          <p>
-            <a href="#" v-b-tooltip title="Tooltip in a modal!">Link</a>
-          </p>
-        </b-modal>
-
-        <!-- CAROUSEL CONTAINER -->
-        <b-carousel-slide :img-src="carousel[0].urlImage"></b-carousel-slide>
-        <b-carousel-slide :img-src="carousel[1].urlImage"></b-carousel-slide>
-        <b-carousel-slide :img-src="carousel[2].urlImage"></b-carousel-slide>
       </b-carousel>
     </div>
   </div>
 </template>
 
 <script>
+const axios = require('axios').default;
+
 export default {
   name: 'Home',
   data() {
     return {
+      missions: {},
       banner: {
         title: 'Unwrapped: Five Decade Old Lunar Selfie',
         explanation:
@@ -152,56 +67,18 @@ export default {
         urlBigImage:
           'https://apod.nasa.gov/apod/image/2109/AldrinVisor_Apollo11_4096.jpg',
       },
-
-      carousel: [
-        {
-          title: 'A Fire Rainbow over West Virginia',
-          explanation:
-            "What's happening to this cloud? Ice crystals in a distant cirrus cloud are acting like little floating prisms. Known informally as a fire rainbow for its flame-like appearance, a circumhorizon arc appears parallel to the horizon. For a circumhorizontal arc to be visible, the Sun must be at least 58 degrees high in a sky where cirrus clouds present below -- in this case cirrus fibrates. The numerous, flat, hexagonal ice-crystals that compose the cirrus cloud must be aligned horizontally to properly refract sunlight in a collectively similar manner. Therefore, circumhorizontal arcs are somewhat unusual to see. The featured fire rainbow was photographed earlier this month near North Fork Mountain in West Virginia, USA.",
-          datePublication: '2021 August 30',
-          urlReference: 'https://apod.nasa.gov/apod/ap210830.html',
-          urlImage:
-            'https://apod.nasa.gov/apod/image/2108/FireRainbow_Harbig_960.jpg',
-          urlBigImage:
-            'https://apod.nasa.gov/apod/image/2108/FireRainbow_Harbig_4000.jpg',
-        },
-
-        {
-          title: 'Sun Spot Hill',
-          explanation:
-            "Is this giant orange ball about to roll down that tree-lined hill? No, because the giant orange ball is actually the Sun. Our Solar System's central star was captured rising beyond a hill on Earth twelve days ago complete with a delightfully detailed foreground. The Sun's disk showed five sunspots, quite a lot considering that during the solar minimum in solar activity of the past few years, most days showed no spots. A close look at the hill -- Sierra del Cid in Perter, Spain -- reveals not only silhouetted pine trees, but silhouetted people -- by coincidence three brothers of the photographer. The trees and brothers were about 3.5-kilometers away during the morning of the well-planned, single-exposure image. A dark filter muted the usually brilliant Sun and brought up great detail on the lower sunspots. Within a few minutes, the Sun rose far above the hill, while within a week, the sunspots rotated around the Sun, out of view. The captured scene, however, is now frozen in time for all to enjoy.",
-          datePublication: '2021 September 21',
-          urlReference: 'https://apod.nasa.gov/apod/ap210921.html',
-          urlImage:
-            'https://apod.nasa.gov/apod/image/2109/SunSpotHill_Coy_960.jpg',
-          urlBigImage:
-            'https://apod.nasa.gov/apod/image/2109/SunSpotHill_Coy_2358.jpg',
-        },
-        {
-          title: 'A Blue Moon in Exaggerated Colors',
-          explanation:
-            "The Moon is normally seen in subtle shades of grey or gold. But small, measurable color differences have been greatly exaggerated to make this telescopic, multicolored, moonscape captured during the Moon's full phase. The different colors are recognized to correspond to real differences in the chemical makeup of the lunar surface. Blue hues reveal titanium rich areas while orange and purple colors show regions relatively poor in titanium and iron. The familiar Sea of Tranquility, or Mare Tranquillitatis, is the blue area toward the upper right. White lines radiate across the orange-hued southern lunar highlands from 85-kilometer wide ray-crater Tycho at bottom right. The full moon that occurred earlier this month could be counted as a seasonal blue moon because it was, unusually, the third of four full moons to occur during northern summer (and hence southern winter). The featured 272-image composite demonstrates that the full Moon is always blue, but usually not blue enough in hue to ooh.",
-          datePublication: '2021 August 31',
-          urlReference: 'https://apod.nasa.gov/apod/ap210831.html',
-          urlImage: 'https://apod.nasa.gov/apod/image/2108/Luna_Fedez_960.jpg',
-          urlBigImage:
-            'https://apod.nasa.gov/apod/image/2108/Luna_Fedez_1600.jpg',
-        },
-        {
-          title: 'The Bubble and the Star Cluster',
-          explanation:
-            ' To the eye, this cosmic composition nicely balances the Bubble Nebula at the right with open star cluster M52. The pair would be lopsided on other scales, though. Embedded in a complex of interstellar dust and gas and blown by the winds from a single, massive O-type star, the Bubble Nebula, also known as NGC 7635, is a mere 10 light-years wide. On the other hand, M52 is a rich open cluster of around a thousand stars. The cluster is about 25 light-years across. Seen toward the northern boundary of Cassiopeia, distance estimates for the Bubble Nebula and associated cloud complex are around 11,000 light-years, while star cluster M52 lies nearly 5,000 light-years away. The wide telescopic field of view spans about 1.5 degrees on the sky or three times the apparent size of a full Moon.',
-          datePublication: '2021 September 25',
-          urlReference: 'https://apod.nasa.gov/apod/ap210925.html',
-          urlImage:
-            'https://apod.nasa.gov/apod/image/2109/241_lorand_fenyes_bubble_m52_1120.jpg',
-          urlBigImage:
-            'https://apod.nasa.gov/apod/image/2109/241_lorand_fenyes_bubble_m52.jpg',
-        },
-      ],
     };
   },
-
+  async created() {
+    await axios.get('https://api.nasa.gov/planetary/apod?start_date=2021-08-28&end_date=2021-09-28&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K')
+      .then((response) => {
+        this.missions = response.data;
+        console.log(this.missions);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  },
 };
 </script>
 

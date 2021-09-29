@@ -2,9 +2,9 @@
   <div id="app" class='bg-black'>
 
     <side-bar/>
-
     <router-view />
   </div>
+
 </template>
 
 <script>
