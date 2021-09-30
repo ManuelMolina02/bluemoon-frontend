@@ -119,7 +119,7 @@
           explore the red planet
         </p>
 
-          <a href="#" class="btn btn-highlights text-white">lear more</a>
+        <a class="text-white" href="#"><span>lear more</span></a>
 
       </div>
 
@@ -324,22 +324,48 @@ export default {
 
 }
 
-.btn-highlights{
- width: 400px !important;
- height: 80px !important;
+.highlights-content a {
 
- font-size: 34px;
- text-align: center;
+  width: 340px;
+  height: 100px;
+  padding: 20px 0;
 
- border-radius: 0 !important;
- border: solid 2px white;
- transition: .5s ease;
+  display: block;
+  position: relative;
+  transition: all .35s;
+
+  font-size: 38px;
+  letter-spacing: 3px;
+  border: solid 2px white;
+  border-radius: 0;
+
+  text-decoration: none;
+  text-align: center;
+
 }
 
-.btn-highlights:hover{
-  background-color: white;
+.highlights-content a span{
+  position: relative;
+  z-index: 2;
+}
+
+.highlights-content a:after{
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #dbdbdb;
+  transition: all .5s;
+}
+
+.highlights-content a:hover{
   color: black !important;
-  transition-delay: .2s;
+}
+
+.highlights-content a:hover:after{
+  height: 100%;
 }
 
 </style>
