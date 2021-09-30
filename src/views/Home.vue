@@ -1,17 +1,35 @@
 <template>
   <div class="home">
     <!-- BANNER CONTAINER -->
-    <div>
-      <img class="w-100" alt="Banner image" :src="banner.urlBigImage" />
+    <div class="banner-container">
+      <div
+        class="banner-image"
+        style="filter: contrast(180%) saturate(1) hue-rotate(184deg)"
+      >
+        <img
+          class="w-100"
+          style="max-width: 1678px"
+          alt="Banner image"
+          :src="banner.urlBigImage"
+        />
+      </div>
 
-      <img src="../assets/image-content.svg" alt="" />
+      <div class="banner-content">
+        <h1 class="text-white" style="margin-bottom: 120px">Astronomy Picture of the Day</h1>
+
+        <p class="text-white ">
+          Discover the cosmos! Each day a different image or photograph of our
+          fascinating universe is featured
+        </p>
+      </div>
     </div>
+
+    <!-- -->
+    <img src="../assets/image-content.svg" alt="" />
 
     <div>
       <h1 class="title">{{ banner.title }}</h1>
     </div>
-    <br>
-    <br>
 
     <!-- CAROUSEL CONTAINER -->
     <div class="carousel-container d-flex">
@@ -25,11 +43,11 @@
         <!-- CAROUSEL IMAGES -->
         <b-carousel-slide
           v-b-modal.primaryPublication
-            v-for="mission in missions"
-            :key="mission.title"
+          v-for="mission in missions"
+          :key="mission.title"
           :img-src="mission.url"
         >
-        <!--
+          <!--
           <b-modal id="primaryPublication" centered ok-only lazy>
             <p>
               {{ mission.title }}
@@ -70,7 +88,10 @@ export default {
     };
   },
   async created() {
-    await axios.get('https://api.nasa.gov/planetary/apod?start_date=2021-08-28&end_date=2021-09-28&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K')
+    await axios
+      .get(
+        'https://api.nasa.gov/planetary/apod?start_date=2021-08-28&end_date=2021-09-28&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
+      )
       .then((response) => {
         this.missions = response.data;
         console.log(this.missions);
@@ -108,5 +129,35 @@ export default {
 
   color: #ffffff;
   opacity: 0.87;
+}
+
+/* BANNER CONTAINER */
+
+.image-mask-filter {
+  position: absolute;
+  background-color: aqua;
+  width: 100%;
+  height: 80%;
+  opacity: 0.2;
+}
+
+/* text content */
+
+.banner-content {
+  width: 40%;
+
+  position: absolute;
+  top: 16%;
+  left: 10%;
+
+  font-family: 'Orbitron', sans-serif;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+}
+.banner-content p{
+
+  font-size: 32px;
 }
 </style>
