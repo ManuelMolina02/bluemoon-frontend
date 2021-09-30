@@ -29,82 +29,83 @@
     </div>
 
     <!-- CAROUSEL CONTAINER -->
-
-    <!-- open called images -->
-    <div class="w-75 my-5 mx-auto">
-      <div>
-        <h1 class="w-50 my-5 mx-auto title text-white">
-          Click on a photo and preview it along with a brief explanation written
-          by a professional astronomer.
-        </h1>
+    <div class="mt-5 py-5" style="background: rgba(20, 20, 20, 0.5)">
+      <!-- open called images -->
+      <div class="w-75 my-5 mx-auto">
+        <div>
+          <h1 class="w-50 my-5 mx-auto title text-white">
+            Click on a photo and preview it along with a brief explanation
+            written by a professional astronomer.
+          </h1>
+        </div>
       </div>
-    </div>
 
-    <div class="carousel-container d-flex">
-      <!-- PRIMARY -> CAROUSEL CONTAINE -->
-      <b-carousel
-        class="carousel-content"
-        style="text-shadow: 0px 0px 2px #000"
-        no-animation
-        indicators
-      >
-        <!-- CAROUSEL IMAGES -->
-        <b-carousel-slide
-          v-b-modal.primaryPublication
-          v-for="mission in missions"
-          :key="mission.title"
-          :img-src="mission.url"
-          class="img-fluid d-block"
-          style="max-width: 860px; max-height: 420px; object-fit: cover"
+      <div class="carousel-container d-flex my-5 py-5">
+        <!-- PRIMARY -> CAROUSEL CONTAINE -->
+        <b-carousel
+          class="carousel-content"
+          style="text-shadow: 0px 0px 2px #000"
+          no-animation
+          indicators
         >
-        </b-carousel-slide>
-      </b-carousel>
+          <!-- CAROUSEL IMAGES -->
+          <b-carousel-slide
+            v-b-modal.primaryPublication
+            v-for="mission in missions"
+            :key="mission.title"
+            :img-src="mission.url"
+            class="img-fluid d-block"
+            style="max-width: 860px; max-height: 420px; object-fit: cover"
+          >
+          </b-carousel-slide>
+        </b-carousel>
 
-      <b-carousel
-        class="carousel-content"
-        style="text-shadow: 0px 0px 2px #000"
-        no-animation
-        indicators
-      >
-        <!-- CAROUSEL IMAGES -->
-        <b-carousel-slide
-          v-b-modal.primaryPublication
-          v-for="mission in missions"
-          :key="mission.title"
-          :img-src="mission.url"
-          class="img-fluid d-block"
-          style="max-width: 860px; max-height: 420px"
+        <b-carousel
+          class="carousel-content"
+          style="text-shadow: 0px 0px 2px #000"
+          no-animation
+          indicators
         >
-        </b-carousel-slide>
-      </b-carousel>
+          <!-- CAROUSEL IMAGES -->
+          <b-carousel-slide
+            v-b-modal.primaryPublication
+            v-for="mission in missions"
+            :key="mission.title"
+            :img-src="mission.url"
+            class="img-fluid d-block"
+            style="max-width: 860px; max-height: 420px"
+          >
+          </b-carousel-slide>
+        </b-carousel>
 
-      <b-carousel
-        class="carousel-content my-5"
-        style="text-shadow: 0px 0px 2px #000"
-        no-animation
-        indicators
-      >
-        <!-- CAROUSEL IMAGES -->
-        <b-carousel-slide
-          v-b-modal.primaryPublication
-          v-for="mission in missions"
-          :key="mission.title"
-          :img-src="mission.url"
-          class="img-fluid d-block"
-          style="max-width: 860px; max-height: 420px"
+        <b-carousel
+          class="carousel-content"
+          style="text-shadow: 0px 0px 2px #000"
+          no-animation
+          indicators
         >
-        </b-carousel-slide>
+          <!-- CAROUSEL IMAGES -->
+          <b-carousel-slide
+            v-b-modal.primaryPublication
+            v-for="mission in missions"
+            :key="mission.title"
+            :img-src="mission.url"
+            class="img-fluid d-block"
+            style="max-width: 860px; max-height: 420px"
+          >
+          </b-carousel-slide>
 
-        <b-modal id="primaryPublication" scrollable title="Scrollable Content">
-          <p class="my-4" v-for="mission in missions" :key="mission.title">
-            {{ mission.title }}
-          </p>
-        </b-modal>
-      </b-carousel>
-    </div>
-
-    <div>
-      <img class="my-5 py-5 w-50" src="../assets/text-content.svg" alt="">
+          <b-modal
+            id="primaryPublication"
+            scrollable
+            title="Scrollable Content"
+          >
+            <p class="my-4" v-for="mission in missions" :key="mission.title">
+              {{ mission.title }}
+            </p>
+          </b-modal>
+        </b-carousel>
+      </div>
     </div>
 
     <!-- HIGHLIGHTS CONTAINER-->
@@ -112,7 +113,7 @@
       class="highlights-container w-100 d-flex mx-auto"
       style="background: rgba(20, 20, 20, 0.8)"
     >
-      <div class="highlights-content text-white w-25 my-5 mx-auto">
+      <div class="highlights-content text-white w-25 p-2 my-5 m-auto">
         <h1>Mars Missons</h1>
         <p>
           Follow every step of the Perseverance and Curiosity robots as they
@@ -120,7 +121,6 @@
         </p>
 
         <a class="text-white" href="#"><span>lear more</span></a>
-
       </div>
 
       <div class="highlights-images w-50 my-5">
@@ -131,6 +131,81 @@
           :src="banner.urlBigImage"
         />
       </div>
+    </div>
+
+    <div
+      class="highlights-container w-100 d-flex mx-auto"
+      style="background: rgba(20, 20, 20, 0.6)"
+    >
+      <div class="highlights-images w-50 my-5">
+        <img
+          class="w-100"
+          style="max-width: 678px"
+          alt="Banner image"
+          :src="banner.urlBigImage"
+        />
+      </div>
+
+      <div class="highlights-content text-white w-25 p-2 my-5 m-auto">
+        <h1>Mars Missons</h1>
+        <p>
+          Follow every step of the Perseverance and Curiosity robots as they
+          explore the red planet
+        </p>
+
+        <a class="text-white" href="#"><span>lear more</span></a>
+      </div>
+    </div>
+
+    <div style="background-color: #0e0e0e">
+            <img
+        class="my-2 py-5 w-50"
+        src="../assets/text-cont.svg"
+        alt=""
+        style="background-color: #0e0e0e"
+      />
+
+      <div class="pb-5">
+        <!-- form card -->
+        <div
+          class="w-50 mx-auto text-white text-start p-5"
+          style="border: solid 2px white; border-radius: 4px"
+        >
+          <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="py-5">
+            <div>
+              <div class="my-3">
+                <div>Value</div>
+                <b-form-input
+                  v-model="text"
+                  placeholder="Enter your name"
+                ></b-form-input>
+              </div>
+
+              <div class="my-3">
+                <div>Value</div>
+                <b-form-input
+                  v-model="text"
+                  placeholder="Enter your name"
+                ></b-form-input>
+              </div>
+
+              <div class="my-3">
+                <div>Value</div>
+                <b-form-input
+                  v-model="text"
+                  placeholder="Enter your name"
+                ></b-form-input>
+              </div>
+            </div>
+
+            <div class="d-flex py-5" style="gap: 15px; justify-content: center">
+              <b-button type="submit" variant="primary">Submit</b-button>
+              <b-button type="reset" variant="danger">Reset</b-button>
+            </div>
+          </b-form>
+        </div>
+      </div>
+
     </div>
   </div>
 </template>
@@ -204,6 +279,7 @@ export default {
           url: 'https://apod.nasa.gov/apod/image/2109/AldrinVisorCrop_Apollo11_1080.jpg',
         },
       ],
+
       banner: {
         title: 'Unwrapped: Five Decade Old Lunar Selfie',
         explanation:
@@ -215,7 +291,41 @@ export default {
         urlBigImage:
           'https://apod.nasa.gov/apod/image/2109/AldrinVisor_Apollo11_4096.jpg',
       },
+
+      form: {
+        email: '',
+        name: '',
+        food: null,
+        checked: [],
+      },
+
+      foods: [
+        { text: 'Select One', value: null },
+        'Carrots',
+        'Beans',
+        'Tomatoes',
+        'Corn',
+      ],
+      show: true,
     };
+  },
+  methods: {
+    onSubmit(event) {
+      event.preventDefault();
+    },
+    onReset(event) {
+      event.preventDefault();
+      // Reset our form values
+      this.form.email = '';
+      this.form.name = '';
+      this.form.food = null;
+      this.form.checked = [];
+      // Trick to reset/clear native browser form validation state
+      this.show = false;
+      this.$nextTick(() => {
+        this.show = true;
+      });
+    },
   },
 
   /*
@@ -277,7 +387,7 @@ export default {
 }
 
 .banner-content p {
-    margin-top: 260px !important;
+  margin-top: 260px !important;
 }
 
 /* CAROUSEL CONTAINER */
@@ -316,23 +426,21 @@ export default {
 /* HIGLIGHTS CONTAINER */
 
 .highlights-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    align-items: center;
-    justify-content: center;
-
+  align-items: initial;
+  justify-content: center;
 }
 
 .highlights-content a {
-
   width: 340px;
   height: 100px;
   padding: 20px 0;
 
   display: block;
   position: relative;
-  transition: all .35s;
+  transition: all 0.35s;
 
   font-size: 38px;
   letter-spacing: 3px;
@@ -341,15 +449,14 @@ export default {
 
   text-decoration: none;
   text-align: center;
-
 }
 
-.highlights-content a span{
+.highlights-content a span {
   position: relative;
   z-index: 2;
 }
 
-.highlights-content a:after{
+.highlights-content a:after {
   position: absolute;
   content: "";
   bottom: 0;
@@ -357,15 +464,14 @@ export default {
   width: 100%;
   height: 0;
   background: #dbdbdb;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
-.highlights-content a:hover{
+.highlights-content a:hover {
   color: black !important;
 }
 
-.highlights-content a:hover:after{
+.highlights-content a:hover:after {
   height: 100%;
 }
-
 </style>

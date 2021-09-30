@@ -3,6 +3,20 @@
 
     <side-bar/>
     <router-view />
+
+    <div class="footer w-100"
+    style="
+     background: #10C1E0;
+     mix-blend-mode: hard-light;
+     height: 700px !important;
+     ">
+      <div class="footer-content d-flex flex-column py-5" >
+        <a class="my-1 " href=""> aaaa </a>
+        <a class="my-1 " href=""> aaaa </a>
+        <a class="my-1 " href=""> aaaa </a>
+        <a class="my-1 " href=""> aaaa </a>
+      </div>
+    </div>
   </div>
 
 </template>
