@@ -156,19 +156,24 @@ export default {
 /* text content */
 
 .banner-content {
-  width: 40%;
+  width: 36rem;
 
   position: absolute;
-  top: 16%;
-  left: 10%;
+  top: 18%;
+  left: 19%;
 
   font-family: "Orbitron", sans-serif;
 }
 
 .banner-content h1 {
-  font-size: 48px;
+  font-size: 58px;
+    text-align: initial !important;
+
 }
 .banner-content p {
-  font-size: 32px;
+  margin-top: 200px !important;
+  font-size: 38px;
+    text-align: initial !important;
+
 }
 </style>
