@@ -40,8 +40,9 @@
           <!-- sidebar content -->
           <nav class="mb-3">
             <b-nav vertical class="m-4" style="text-align: initial">
-              <b-nav-item href="#link-1" @click="hide">Link</b-nav-item>
-              <b-nav-item href="#link-2" @click="hide">Another Link</b-nav-item>
+              <b-nav-item href="#banner-container" @click="hide"
+                >Link</b-nav-item
+              >
             </b-nav>
           </nav>
         </div>
@@ -53,15 +54,11 @@
 <script>
 export default {
   name: 'SideBar',
-  props: {
-    msg: String,
-  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 /* moon animation orbiting */
 .logo {
   animation: spin 2.6s linear infinite;

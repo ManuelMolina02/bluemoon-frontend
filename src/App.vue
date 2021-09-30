@@ -26,19 +26,7 @@ import SideBar from '@/components/SideBar.vue';
 
 export default {
   name: 'Home',
-  data() {
-    return {
-      registers: [
-        {
-          title: 'Unwrapped: Five Decade Old Lunar Selfie',
-          explanation: "Here is one of the most famous pictures from the Moon -- but digitally reversed. Apollo 11 landed on the moon in 1969 and soon thereafter many pictures were taken, including an iconic picture of Buzz Aldrin taken by Neil Armstrong. The original image captured not only the magnificent desolation of an unfamiliar world, but Armstrong himself reflected in Aldrin's curved visor. Enter modern digital technology. In the featured image, the spherical distortion from Aldrin's helmet has been reversed. The result is the famous picture -- but now featuring Armstrong himself from Aldrin's perspective. Even so, since Armstrong took the picture, the image is effectively a five-decade old lunar selfie. The original visor reflection is shown on the left, while Earth hangs in the lunar sky on the upper right. A foil-wrapped leg of the Eagle lander is prominently visible. Preparations to return humans to the Moon in the next few years include the Artemis program, an international collaboration led by NASA",
-          datePublication: '2021 September 27',
-          urlImage: 'https://apod.nasa.gov/apod/image/2109/AldrinVisorCrop_Apollo11_1080.jpg',
-          urlBigImage: 'https://apod.nasa.gov/apod/image/2109/AldrinVisor_Apollo11_4096.jpg',
-        },
-      ],
-    };
-  },
+
   components: {
     SideBar,
   },
@@ -61,6 +49,20 @@ side-bar{
    display: flex !important;
     align-items: center;
     justify-content: center;
+}
+
+/*text globals*/
+.banner-content h1,
+.highlights-content h1 {
+  font-size: 78px;
+  font-weight: bold;
+  text-align: initial !important;
+}
+
+.banner-content p,
+.highlights-content p {
+  font-size: 38px;
+  text-align: initial !important;
 }
 
 </style>
