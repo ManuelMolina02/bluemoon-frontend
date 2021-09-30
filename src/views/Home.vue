@@ -15,9 +15,11 @@
       </div>
 
       <div class="banner-content">
-        <h1 class="text-white" style="margin-bottom: 120px">Astronomy Picture of the Day</h1>
+        <h1 class="text-white" style="margin-bottom: 120px">
+          Astronomy Picture of the Day
+        </h1>
 
-        <p class="text-white ">
+        <p class="text-white">
           Discover the cosmos! Each day a different image or photograph of our
           fascinating universe is featured
         </p>
@@ -25,10 +27,15 @@
     </div>
 
     <!-- -->
-    <img src="../assets/image-content.svg" alt="" />
+    <div class="my-5">
+      <img src="../assets/image-content.svg" alt="" />
+    </div>
 
     <div>
-      <h1 class="title">{{ banner.title }}</h1>
+      <h1 class="title">
+        Click on a photo and preview it along with a brief explanation written
+        by a professional astronomer.
+      </h1>
     </div>
 
     <!-- CAROUSEL CONTAINER -->
@@ -104,6 +111,7 @@ export default {
 </script>
 
 <style scoped>
+
 .carousel-container {
   align-items: center;
 }
@@ -122,9 +130,13 @@ export default {
 }
 
 .title {
-  font-family: Orbitron;
-  font-size: 88px;
-  line-height: 120px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 32px;
+  line-height: 60px;
+
+  width: 60%;
+  margin: 80px auto;
+
   letter-spacing: 0.1em;
 
   color: #ffffff;
@@ -150,14 +162,13 @@ export default {
   top: 16%;
   left: 10%;
 
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 .banner-content h1 {
   font-size: 48px;
 }
-.banner-content p{
-
+.banner-content p {
   font-size: 32px;
 }
 </style>
