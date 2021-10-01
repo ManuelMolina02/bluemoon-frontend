@@ -147,14 +147,16 @@ side-bar {
 
 /*text globals*/
 .banner-content h1,
-.highlights-content h1 {
+.highlights-content h1,
+.product-content h1 {
   font-size: 78px;
   font-weight: bold;
   text-align: initial !important;
 }
 
 .banner-content p,
-.highlights-content p {
+.highlights-content p,
+.product-content {
   font-size: 38px;
   text-align: initial !important;
 }

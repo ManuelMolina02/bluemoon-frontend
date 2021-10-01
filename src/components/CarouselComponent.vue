@@ -161,7 +161,7 @@
 const axios = require('axios').default;
 
 export default {
-  name: 'CarouselContainer',
+  name: 'CarouselComponent',
 
   data() {
     return {

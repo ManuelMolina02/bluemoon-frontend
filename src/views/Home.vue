@@ -1,8 +1,11 @@
 <template>
   <div class="home">
     <!-- BANNER CONTAINER -->
-    <banner-container />
 
+    <!-- card de apresentação -->
+    <banner-component />
+
+    <!-- div image -->
     <div style="background-color: #0e0e0e">
       <img
         class="my-5 py-5 w-50"
@@ -18,7 +21,7 @@
       class="py-5"
       style="background: rgba(20, 20, 20, 0.5)"
     >
-      <!-- open called images -->
+      <!-- chamada para visualizar pesquisas e fotos de missões -->
       <div class="w-75 my-5 mx-auto">
         <div>
           <h1 class="w-50 my-5 mx-auto title text-white">
@@ -28,20 +31,25 @@
         </div>
       </div>
 
-      <carousel-container />
-      <!-- PRIMARY -> CAROUSEL CONTAINE -->
+      <carousel-component />
+    </div>
+
+    <!-- PRODUCT CONTAINER-->
+    <div
+      class="highlights-container w-100 d-flex mx-auto"
+      style="background: rgba(20, 20, 20, 0.8)"
+    >
+      <product-component />
+
     </div>
 
     <!-- HIGHLIGHTS CONTAINER-->
     <div
       class="highlights-container w-100 d-flex mx-auto"
-      style=" background: rgba(20, 20, 20, 0.8)"
+      style="background: rgba(20, 20, 20, 0.8)"
     >
       <cards-highlights-component />
 
-      <!--
-
-     -->
     </div>
 
     <div
@@ -73,10 +81,11 @@
 </template>
 
 <script>
-import BannerContainer from '@/components/BannerContainer.vue';
-import CarouselContainer from '@/components/CarouselContainer.vue';
+import BannerComponent from '@/components/BannerComponent.vue';
+import CarouselComponent from '@/components/CarouselComponent.vue';
 import FormComponent from '@/components/FormComponent.vue';
 import CardsHighlightsComponent from '@/components/CardsHighlightsComponent.vue';
+import ProductComponent from '@/components/ProductComponent.vue';
 
 const axios = require('axios').default;
 
@@ -103,10 +112,11 @@ export default {
   },
 
   components: {
-    BannerContainer,
-    CarouselContainer,
+    BannerComponent,
+    CarouselComponent,
     FormComponent,
     CardsHighlightsComponent,
+    ProductComponent,
   },
 };
 </script>
@@ -169,5 +179,4 @@ export default {
 .highlights-content a:hover:after {
   height: 100%;
 }
-
 </style>
