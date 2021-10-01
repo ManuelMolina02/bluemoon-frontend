@@ -35,26 +35,13 @@
     <!-- HIGHLIGHTS CONTAINER-->
     <div
       class="highlights-container w-100 d-flex mx-auto"
-      style="background: rgba(20, 20, 20, 0.8)"
+      style=" background: rgba(20, 20, 20, 0.8)"
     >
-      <div class="highlights-content text-white w-25 p-2 my-5 m-auto">
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
-        </p>
+      <cards-highlights-component />
 
-        <a class="text-white" href="#"><span>lear more</span></a>
-      </div>
+      <!--
 
-      <div class="highlights-images w-50 my-5">
-        <img
-          class="w-100 img-fluid d-block"
-          style="max-width: 678px"
-          alt="Banner image"
-          :src="missions[3].url"
-        />
-      </div>
+     -->
     </div>
 
     <div
@@ -89,6 +76,7 @@
 import BannerContainer from '@/components/BannerContainer.vue';
 import CarouselContainer from '@/components/CarouselContainer.vue';
 import FormComponent from '@/components/FormComponent.vue';
+import CardsHighlightsComponent from '@/components/CardsHighlightsComponent.vue';
 
 const axios = require('axios').default;
 
@@ -118,6 +106,7 @@ export default {
     BannerContainer,
     CarouselContainer,
     FormComponent,
+    CardsHighlightsComponent,
   },
 };
 </script>
@@ -173,7 +162,7 @@ export default {
   transition: all 0.5s;
 }
 
-.highlights-content a:hover{
+.highlights-content a:hover {
   color: black !important;
 }
 

@@ -77,7 +77,7 @@
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
               <p>
-                <a href="#!" class="text-reset">Home</a>
+                <a href="#!" class="text-reset">About</a>
               </p>
               <p>
                 <a href="#!" class="text-reset">Highlights</a>
@@ -145,11 +145,6 @@ side-bar {
   justify-content: center;
 }
 
-/* moon animation orbiting */
-.logo {
-  animation: spin 2.6s linear infinite;
-}
-
 /*text globals*/
 .banner-content h1,
 .highlights-content h1 {
@@ -164,9 +159,39 @@ side-bar {
   text-align: initial !important;
 }
 
+/* LOGO ANIMATION */
+
+/* moon animation orbiting */
+.logo {
+  animation: spin 2.6s linear infinite;
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
+
+/* SCROLBAR */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #bdbdbd;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(90, 90, 90);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(61, 61, 61);
+}
+
 </style>
