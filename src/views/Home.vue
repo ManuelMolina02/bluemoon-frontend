@@ -3,10 +3,19 @@
     <!-- BANNER CONTAINER -->
     <banner-container />
 
+    <div style="background-color: #0e0e0e">
+      <img
+        class="my-5 py-5 w-50"
+        src="../assets/text-content.svg"
+        alt=""
+        style="background-color: #0e0e0e"
+      />
+    </div>
+
     <!-- CAROUSEL CONTAINER -->
     <div
       id="carousel-container"
-      class="mt-5 py-5"
+      class="py-5"
       style="background: rgba(20, 20, 20, 0.5)"
     >
       <!-- open called images -->
@@ -19,9 +28,8 @@
         </div>
       </div>
 
-      <carousel-container/>
-        <!-- PRIMARY -> CAROUSEL CONTAINE -->
-
+      <carousel-container />
+      <!-- PRIMARY -> CAROUSEL CONTAINE -->
     </div>
 
     <!-- HIGHLIGHTS CONTAINER-->
@@ -73,61 +81,14 @@
       </div>
     </div>
 
-    <div style="background-color: #0e0e0e">
-      <img
-        class="my-2 py-5 w-50"
-        src="../assets/text-cont.svg"
-        alt=""
-        style="background-color: #0e0e0e"
-      />
-
-      <div class="pb-5">
-        <!-- form card -->
-        <div
-          class="w-50 mx-auto text-white text-start p-5"
-          style="border: solid 2px white; border-radius: 4px"
-        >
-          <b-form @submit="onSubmit" @reset="onReset" v-if="show" class="py-5">
-            <div>
-              <div class="my-3">
-                <div>Value</div>
-                <b-form-input
-                  v-model="text"
-                  placeholder="Enter your name"
-                ></b-form-input>
-              </div>
-
-              <div class="my-3">
-                <div>Value</div>
-                <b-form-input
-                  v-model="text"
-                  placeholder="Enter your name"
-                ></b-form-input>
-              </div>
-
-              <div class="my-3">
-                <div>Value</div>
-                <b-form-input
-                  v-model="text"
-                  placeholder="Enter your name"
-                ></b-form-input>
-              </div>
-            </div>
-
-            <div class="d-flex py-5" style="gap: 15px; justify-content: center">
-              <b-button type="submit" variant="primary">Submit</b-button>
-              <b-button type="reset" variant="danger">Reset</b-button>
-            </div>
-          </b-form>
-        </div>
-      </div>
-    </div>
+    <form-component />
   </div>
 </template>
 
 <script>
 import BannerContainer from '@/components/BannerContainer.vue';
 import CarouselContainer from '@/components/CarouselContainer.vue';
+import FormComponent from '@/components/FormComponent.vue';
 
 const axios = require('axios').default;
 
@@ -135,41 +96,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      missions: [],
-      form: {
-        email: '',
-        name: '',
-        food: null,
-        checked: [],
-      },
-
-      foods: [
-        { text: 'Select One', value: null },
-        'Carrots',
-        'Beans',
-        'Tomatoes',
-        'Corn',
-      ],
-      show: true,
+      missions: {},
     };
-  },
-  methods: {
-    onSubmit(event) {
-      event.preventDefault();
-    },
-    onReset(event) {
-      event.preventDefault();
-      // Reset our form values
-      this.form.email = '';
-      this.form.name = '';
-      this.form.food = null;
-      this.form.checked = [];
-      // Trick to reset/clear native browser form validation state
-      this.show = false;
-      this.$nextTick(() => {
-        this.show = true;
-      });
-    },
   },
 
   async created() {
@@ -188,6 +116,7 @@ export default {
   components: {
     BannerContainer,
     CarouselContainer,
+    FormComponent,
   },
 };
 </script>

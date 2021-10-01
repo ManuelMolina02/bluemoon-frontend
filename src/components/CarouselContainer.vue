@@ -24,7 +24,7 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      interval="3500"
+      interval="3300"
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -43,7 +43,7 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      interval="3500"
+      interval="3000"
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -58,10 +58,23 @@
     </b-carousel>
 
     <!-- MODAL CONTENT -->
-    <b-modal id="primaryPublication" scrollable title="Primary Content">
-      <p class="my-4" v-for="mission in missions" :key="mission.title">
-        {{ mission.title }}
-      </p>
+    <b-modal
+      id="primaryPublication"
+      centered
+      scrollable
+      button-size="lg"
+      size="lg"
+      title="Primary Content"
+      modal-cancel="no"
+    >
+      <div class="my-4" v-for="mission in missions" :key="mission.title">
+        <h3>{{ mission.title }}</h3>
+        <p>{{ mission.explanation }}</p>
+
+        <div>
+          <b-img-lazy :src="mission.url" fluid alt="" />
+        </div>
+      </div>
     </b-modal>
 
     <b-modal id="secondPublication" scrollable title="Second Contents">
@@ -89,10 +102,11 @@ export default {
       missions: {},
     };
   },
+
   async created() {
     await axios
       .get(
-        'https://api.nasa.gov/planetary/apod?start_date=2021-08-28&end_date=2021-09-28&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
+        'https://api.nasa.gov/planetary/apod?start_date=2021-09-10&end_date=2021-09-16&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
       )
       .then((response) => {
         this.missions = response.data;
@@ -131,7 +145,7 @@ export default {
   }
 
   100% {
-    filter: hue-rotate(0) ;
+    filter: hue-rotate(0);
   }
 }
 </style>
