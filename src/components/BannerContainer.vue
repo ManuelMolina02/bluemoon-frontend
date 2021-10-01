@@ -12,7 +12,9 @@
       <b-card-text>
         {{ banner.description }}
       </b-card-text>
+
     </b-card>
+
   </div>
 </template>
 
@@ -41,11 +43,21 @@ export default {
   /*
   filter: grayscale(0.2) contrast(180%) saturate(1) hue-rotate(184deg);
   */
+
   max-width: 1678px;
   border: none !important;
 
   font-family: "Quantico", sans-serif;
 }
+
+/* image area */
+.card-img,
+.card-img-top,
+.card-img-bottom {
+  width: 100%;
+  height: 816px;
+}
+
 .banner-container h4 {
   width: 55%;
   padding-left: 80px;
@@ -63,4 +75,5 @@ export default {
   font-size: 40px;
   text-align: initial !important;
 }
+
 </style>

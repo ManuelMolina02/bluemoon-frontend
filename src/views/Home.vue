@@ -113,6 +113,7 @@ export default {
         console.error(error);
       });
   },
+
   components: {
     BannerContainer,
     CarouselContainer,
@@ -172,11 +173,12 @@ export default {
   transition: all 0.5s;
 }
 
-.highlights-content a:hover {
+.highlights-content a:hover{
   color: black !important;
 }
 
 .highlights-content a:hover:after {
   height: 100%;
 }
+
 </style>

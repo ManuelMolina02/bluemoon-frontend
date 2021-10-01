@@ -1,6 +1,11 @@
 <template>
   <div id="app" class="bg-black">
+    <!--
+    <base-spinner/>
+    -->
+
     <side-bar />
+
     <router-view />
 
     <!-- Footer -->
@@ -19,7 +24,10 @@
         </div>
 
         <div>
-          <a href="https://www.instagram.com/manuuelmolinaa/" class="me-3 text-reset">
+          <a
+            href="https://www.instagram.com/manuuelmolinaa/"
+            class="me-3 text-reset"
+          >
             <b-icon icon="instagram" font-scale="3"></b-icon>
           </a>
 
@@ -27,7 +35,10 @@
             <b-icon icon="github" font-scale="3"></b-icon>
           </a>
 
-          <a href="https://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/" class="me-3 text-reset">
+          <a
+            href="https://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/"
+            class="me-3 text-reset"
+          >
             <b-icon icon="linkedin" font-scale="3"></b-icon>
           </a>
         </div>
@@ -54,7 +65,9 @@
                 <a href="https://vuejs.org/" class="text-reset">Vue</a>
               </p>
               <p>
-                <a href="https://bootstrap-vue.org/" class="text-reset">Bootstrap-vue</a>
+                <a href="https://bootstrap-vue.org/" class="text-reset"
+                  >Bootstrap-vue</a
+                >
               </p>
               <p>
                 <a href="https://axios-http.com/" class="text-reset">Axios</a>
@@ -100,12 +113,16 @@
 
 <script>
 import SideBar from '@/components/SideBar.vue';
+/*
+import BaseSpinner from '@/components/global/BaseSpinner.vue';
+*/
 
 export default {
   name: 'Home',
 
   components: {
     SideBar,
+    /* BaseSpinner */
   },
 };
 </script>
@@ -128,6 +145,11 @@ side-bar {
   justify-content: center;
 }
 
+/* moon animation orbiting */
+.logo {
+  animation: spin 2.6s linear infinite;
+}
+
 /*text globals*/
 .banner-content h1,
 .highlights-content h1 {
@@ -140,5 +162,11 @@ side-bar {
 .highlights-content p {
   font-size: 38px;
   text-align: initial !important;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 </style>

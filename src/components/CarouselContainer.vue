@@ -5,7 +5,8 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      interval="3500"
+      :interval="3500"
+
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -24,7 +25,7 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      interval="3300"
+      :interval="3300"
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -43,7 +44,7 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      interval="3000"
+      :interval="3000"
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -62,10 +63,20 @@
       id="primaryPublication"
       centered
       scrollable
+      ok-only
       button-size="lg"
       size="lg"
       title="Primary Content"
-      modal-cancel="no"
+
+            header-class="text-white bg-dark"
+            body-class="text-white bg-dark "
+            footer-class="text-white bg-dark justify-content-center"
+
+            content-class='bg-dark'
+
+            ok-variant="outline-secondary w-50"
+            ok-title="Close"
+
     >
       <div class="my-4" v-for="mission in missions" :key="mission.title">
         <h3>{{ mission.title }}</h3>
@@ -74,6 +85,7 @@
         <div>
           <b-img-lazy :src="mission.url" fluid alt="" />
         </div>
+
       </div>
     </b-modal>
 
@@ -92,6 +104,7 @@
 </template>
 
 <script>
+
 const axios = require('axios').default;
 
 export default {
@@ -116,6 +129,7 @@ export default {
         console.error(error);
       });
   },
+
 };
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -148,4 +162,5 @@ export default {
     filter: hue-rotate(0);
   }
 }
+
 </style>
