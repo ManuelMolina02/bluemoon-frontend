@@ -25,8 +25,8 @@
       <div class="w-75 my-5 mx-auto">
         <div>
           <h1 class="w-50 my-5 mx-auto title text-white">
-            Click on a photo and preview it along with a brief explanation
-            written by a professional astronomer.
+            Clique em uma foto e visualize-a junto com uma breve explicação
+            escrita por um astrônomo profissional.
           </h1>
         </div>
       </div>

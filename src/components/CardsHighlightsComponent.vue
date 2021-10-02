@@ -1,70 +1,34 @@
 <template>
-  <div>
-    <div class="highlights-container w-100 d-flex my-5 mx-auto">
-      <div class="highlights-images w-50 my-5">
+  <div class="highlights-container w-100 d-flex my-5 mx-auto">
+
+    <div class="highlights-images w-50 my-5">
+      <img
+        class="w-100"
+        style="max-width: 678px"
+        alt="Banner image"
+        :src="missions.url"
+      />
+
+      <div>
         <img
           class="w-100"
           style="max-width: 678px"
           alt="Banner image"
           :src="missions.url"
         />
-
-        <div>
-          <img
-            class="w-100"
-            style="max-width: 678px"
-            alt="Banner image"
-            :src="missions.url"
-          />
-        </div>
-      </div>
-
-      <div
-        class="highlights-content text-white p-2 my-5 m-auto"
-        style="width: 35%"
-      >
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
-        </p>
-
-        <a class="text-white" href="#"><span>lear more</span></a>
       </div>
     </div>
 
-    <div class="highlights-container w-100 d-flex my-5 mx-auto">
-      <div
-        class="highlights-content text-white p-2 my-5 m-auto"
-        style="width: 35%"
-      >
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
-        </p>
+    <div class="highlights-content text-white p-2 my-5 m-auto" style="width: 35%">
+      <h1>Mars Missons</h1>
+      <p>
+        Follow every step of the Perseverance and Curiosity robots as they
+        explore the red planet
+      </p>
 
-        <a class="text-white" href="#"><span>lear more</span></a>
-      </div>
-
-      <div class="highlights-images w-50 my-5">
-        <img
-          class="w-100"
-          style="max-width: 678px"
-          alt="Banner image"
-          :src="missions.url"
-        />
-
-        <div>
-          <img
-            class="w-100"
-            style="max-width: 678px"
-            alt="Banner image"
-            :src="missions.url"
-          />
-        </div>
-      </div>
+      <a class="text-white" href="#"><span>lear more</span></a>
     </div>
+
   </div>
 </template>
 
@@ -106,13 +70,13 @@ export default {
 .highlights-content a {
   width: 340px;
   height: 100px;
-  padding: 20px 0;
+  padding: 14px 0;
 
   display: block;
   position: relative;
   transition: all 0.35s;
 
-  font-size: 38px;
+  font-size: 42px;
   letter-spacing: 3px;
   border: solid 2px white;
   border-radius: 0;
@@ -134,11 +98,13 @@ export default {
   width: 100%;
   height: 0;
   background: #dbdbdb;
-  transition: all 0.5s;
+  transition: all 0.7s;
 }
 
 .highlights-content a:hover {
-  color: black !important;
+  color: var(--dark-blue) !important;
+  font-weight: bold;
+  border: solid 2px white;
 }
 
 .highlights-content a:hover:after {
@@ -157,18 +123,21 @@ export default {
 .highlights-images div img {
   position: relative;
   border-radius: 16px;
-  top: -132px;
-  left: 140px;
-  transition-duration: 1s;
-  transition-delay: 0.2s;
+    top: -132px;
+    left: 140px;
+    transition-duration: 1s;
+    transition-delay: .2s;
 
   box-shadow: rgba(19, 19, 19, 0.4) -5px -5px,
-    rgba(19, 19, 19, 0.267) -10px -10px, rgba(19, 19, 19, 0.267) -15px -15px,
+    rgba(19, 19, 19, 0.267)  -10px -10px, rgba(19, 19, 19, 0.267) -15px -15px,
     rgba(31, 31, 31, 0.062) -20px -20px, rgba(31, 31, 31, 0.062) -25px -25px;
 }
 
 .highlights-images div img:hover {
-  top: -152px;
-  left: 44px;
+
+    top: -152px;
+    left: 44px;
+
 }
+
 </style>

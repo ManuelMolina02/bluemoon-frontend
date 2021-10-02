@@ -1,12 +1,12 @@
 <template>
   <div>
     <!-- HEADER CONTAINER -->
-    <div v-b-toggle.sidebar-no-header class="p-3">
+    <div v-b-toggle.sidebar-no-header class="p-4">
       <!-- moon orbiting -->
       <img
         class="logo"
         src="../assets/frame.svg"
-        style="width: 32px; opacity: 0.91"
+        style="width: 46px; opacity: 0.91"
         alt=""
       />
 
@@ -14,7 +14,7 @@
       <img
         class="mx-2"
         src="../assets/bluemoon.svg"
-        style="width: 142px; opacity: 0.91"
+        style="width: 232px; opacity: 0.91"
         alt=""
       />
     </div>

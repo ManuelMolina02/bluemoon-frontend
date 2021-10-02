@@ -1,8 +1,5 @@
 <template>
   <div id="app" class="bg-black">
-    <!--
-    <base-spinner/>
-    -->
 
     <side-bar />
 
@@ -128,8 +125,7 @@ export default {
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap");
+@import url('./assets/css/style.css');
 
 #app {
   font-family: "Orbitron", sans-serif;
@@ -146,54 +142,12 @@ side-bar {
 }
 
 /*text globals*/
-.banner-content h1,
-.highlights-content h1,
-.product-content h1 {
-  font-size: 78px;
-  font-weight: bold;
-  text-align: initial !important;
-}
-
-.banner-content p,
-.highlights-content p,
-.product-content {
-  font-size: 38px;
-  text-align: initial !important;
-}
 
 /* LOGO ANIMATION */
 
 /* moon animation orbiting */
 .logo {
   animation: spin 2.6s linear infinite;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* SCROLBAR */
-
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #bdbdbd;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgb(90, 90, 90);
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(61, 61, 61);
 }
 
 </style>

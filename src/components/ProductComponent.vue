@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="product-container w-100 d-flex my-5 mx-auto"
-  >
+  <div class="product-container w-100 d-flex my-5 mx-auto">
     <div class="product-images w-50 my-5">
       <img
         class="w-100"
@@ -11,44 +9,65 @@
       />
     </div>
 
-    <div class="product-content text-white p-2 my-5 m-auto" style="width: 35%">
-      <div class="product-item mb-5">
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
+    <div class="product-content text-white p-2 my-5" style="width: 35%">
+      <div class="product-item my-4 py-2">
+        <div class="w-75 d-flex">
+          <h1>+10.000</h1>
+          <span>publicações</span>
+        </div>
+
+        <p class="py-3">
+          O maior acervo digital de fotos e pesquisas astronômicas da América
+          Latina.
         </p>
       </div>
 
-      <div class="product-item mb-5">
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
+      <div class="product-item my-4 py-2">
+        <div class="w-75 d-flex">
+          <h1>+32.000</h1>
+          <span>cadastros realizados</span>
+        </div>
+
+        <p class="py-3">
+          Faça parte da nossa comunidade apaixonada pelo espaço e participe das
+          trocas de conhecimento que ocorrem nos fóruns.
         </p>
       </div>
 
-      <div class="product-item mb-5">
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
+      <div class="product-item my-4 py-2">
+        <div class="w-75 d-flex">
+          <h1>+100</h1>
+          <span>colaboradores</span>
+        </div>
+
+        <p class="py-3">
+          Conteúdos atualizados e explicativos fornecidos por uma equipe de
+          pesquisadores e redatores que atuam tornando as matérias acessíveis a
+          todos os publicos.
         </p>
       </div>
 
-      <div class="product-item mb-5">
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
+      <div class="product-item my-4 py-2">
+        <div class="w-75 d-flex">
+          <h1>+32.000</h1>
+          <span>cadastros realizados</span>
+        </div>
+
+        <p class="py-3">
+          Faça parte da nossa comunidade apaixonada pelo espaço e participe das
+          trocas de conhecimento que ocorrem nos fóruns.
         </p>
       </div>
 
-      <div class="product-item mb-5">
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
+      <div class="product-item my-4 py-2">
+        <div class="w-75 d-flex">
+          <h1>+32.000</h1>
+          <span>cadastros realizados</span>
+        </div>
+
+        <p class="py-3">
+          Faça parte da nossa comunidade apaixonada pelo espaço e participe das
+          trocas de conhecimento que ocorrem nos fóruns.
         </p>
       </div>
     </div>
@@ -91,11 +110,32 @@ export default {
   justify-content: center;
 }
 
+.product-content div {
+  align-items: flex-end;
+}
+
+.product-content h1 {
+  color: var(--light-blue);
+  line-height: 0.88;
+  margin-bottom: 0 !important;
+}
+
+.product-content span {
+  text-align: left;
+  width: min-content;
+}
+
+.product-content p {
+  font-size: 28px;
+  color: rgb(218, 232, 245);
+  font-family: Quantico;
+
+  padding-right: 5rem !important;
+}
+
 .product-images > img {
   position: sticky;
   border-radius: 8px;
-  transition-delay: 2s;
-
   top: 32px;
 }
 </style>

@@ -193,16 +193,20 @@ export default {
 
 .carousel-content {
   filter: grayscale(100%);
+  cursor: pointer;
+  border: 2px solid white !important;
+
 }
 
 .carousel-content:hover {
-  transition-delay: 0.2s;
-  animation: filter-animation 3s forwards;
+  transition-delay: 1s;
+  animation: filter-animation 1s forwards;
 }
 
 .carousel-item img {
   max-width: 100% !important;
   height: auto !important;
+
 }
 
 @keyframes filter-animation {
