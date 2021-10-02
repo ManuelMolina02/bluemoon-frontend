@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <!-- BANNER CONTAINER -->
+    <!--  CONTAINER -->
 
     <!-- card de apresentação -->
     <banner-component />
@@ -40,7 +40,6 @@
       style="background: rgba(20, 20, 20, 0.8)"
     >
       <product-component />
-
     </div>
 
     <!-- HIGHLIGHTS CONTAINER-->
@@ -49,31 +48,6 @@
       style="background: rgba(20, 20, 20, 0.8)"
     >
       <cards-highlights-component />
-
-    </div>
-
-    <div
-      class="highlights-container w-100 d-flex mx-auto"
-      style="background: rgba(20, 20, 20, 0.6)"
-    >
-      <div class="highlights-images w-50 my-5">
-        <img
-          class="w-100"
-          style="max-width: 678px"
-          alt="Banner image"
-          :src="missions[2].url"
-        />
-      </div>
-
-      <div class="highlights-content text-white w-25 p-2 my-5 m-auto">
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
-        </p>
-
-        <a class="text-white" href="#"><span>lear more</span></a>
-      </div>
     </div>
 
     <form-component />
