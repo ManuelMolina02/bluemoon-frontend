@@ -5,7 +5,7 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      :interval="3500"
+      :interval="3000"
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -13,8 +13,8 @@
         v-for="mission in missions"
         :key="mission.title"
         :img-src="mission.url"
-        class="img-fluid d-block"
-        style="max-width: 860px; max-height: 420px; object-fit: cover"
+        class="d-block"
+        style="max-width: 860px; max-height: 380px;"
       >
       </b-carousel-slide>
     </b-carousel>
@@ -24,7 +24,7 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      :interval="3300"
+      :interval="3100"
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -33,7 +33,7 @@
         :key="mission.title"
         :img-src="mission.url"
         class="img-fluid d-block"
-        style="max-width: 860px; max-height: 420px; object-fit: cover"
+        style="max-width: 860px; max-height: 380px;"
       >
       </b-carousel-slide>
     </b-carousel>
@@ -43,7 +43,7 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      :interval="3000"
+      :interval="3200"
     >
       <!-- CAROUSEL IMAGES -->
       <b-carousel-slide
@@ -52,7 +52,7 @@
         :key="mission.title"
         :img-src="mission.url"
         class="img-fluid d-block"
-        style="max-width: 860px; max-height: 420px; object-fit: cover"
+        style="max-width: 860px; max-height: 380px;"
       >
       </b-carousel-slide>
     </b-carousel>
@@ -90,7 +90,7 @@
       </div>
     </b-modal>
 
-      <b-modal
+    <b-modal
       id="secondPublication"
       centered
       scrollable
@@ -122,7 +122,7 @@
       </div>
     </b-modal>
 
-      <b-modal
+    <b-modal
       id="thirdPublication"
       centered
       scrollable
@@ -153,7 +153,6 @@
         </b-card>
       </div>
     </b-modal>
-
   </div>
 </template>
 
@@ -191,11 +190,16 @@ export default {
   align-items: center;
 }
 
+.carousel-content .carousel-inner {
+  height: 400px;
+}
+
 .carousel-content {
   filter: grayscale(100%);
   cursor: pointer;
-  border: 2px solid white !important;
 
+  border-top: 2px solid rgb(112, 112, 112) !important;
+  border-bottom: 2px solid rgb(112, 112, 112) !important;
 }
 
 .carousel-content:hover {
@@ -204,9 +208,10 @@ export default {
 }
 
 .carousel-item img {
-  max-width: 100% !important;
-  height: auto !important;
+  width: 100% !important;
+  height: 368px !important;
 
+  background-size: cover !important;
 }
 
 @keyframes filter-animation {
@@ -220,19 +225,36 @@ export default {
 }
 
 .card {
-    border: 1px solid rgb(0 0 0 / 25%);
-    border-top-left-radius: calc(1.25rem - -1px);
-    border-top-right-radius: calc(1.25rem - 1px);
+  border: 1px solid rgb(0 0 0 / 25%);
+  border-top-left-radius: calc(1.25rem - -1px);
+  border-top-right-radius: calc(1.25rem - 1px);
 }
 
-.card-img, .card-img-top {
-    border-top-left-radius: calc(1.25rem - -1px);
-    border-top-right-radius: calc(1.25rem - 1px);
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(1.25rem - -1px);
+  border-top-right-radius: calc(1.25rem - 1px);
 
-    width: 100%;
-    height: 378px;
+  width: 100%;
+  height: 368px;
 
-    background-size: cover;
+  background-size: cover;
+}
 
+/*border carousel*/
+
+.carousel-content:nth-child(1) {
+  border-left: 2px solid rgb(112, 112, 112) !important;
+  border-right: 1px solid rgb(112, 112, 112) !important;
+}
+
+.carousel-content:nth-child(2) {
+  border-left: 1px solid rgb(112, 112, 112) !important;
+  border-right: 1px solid rgb(112, 112, 112) !important;
+}
+
+.carousel-content:nth-child(3) {
+  border-left: 1px solid rgb(112, 112, 112) !important;
+  border-right: 2px solid rgb(112, 112, 112) !important;
 }
 </style>

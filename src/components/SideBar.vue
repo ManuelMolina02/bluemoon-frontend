@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- HEADER CONTAINER -->
-    <div v-b-toggle.sidebar-no-header class="p-4">
+    <div v-b-toggle.sidebar-no-header class="p-4" style="background-color:#0e0e0ed1">
       <!-- moon orbiting -->
       <img
         class="logo"

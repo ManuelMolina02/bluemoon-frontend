@@ -8,7 +8,7 @@
       style="border: none !important"
     >
       <b-card-text class="banner-content m-5">
-        <h1>{{ missions.title }}</h1>
+        <h1 class="text-uppercase">{{ missions.title }}</h1>
         <p>{{ missions.explanation }}</p>
       </b-card-text>
     </b-card>
@@ -42,17 +42,18 @@ export default {
 }
 
 .banner-content h1 {
-  font-family: "Tourney", cursive;
-  width: 35%;
-
-  font-size: 108px;
-  margin-top: 20px;
+  font-family: 'Audiowide', cursive;
+  color: var(--white);
+  width: 40%;
+  font-size: 118px;
   margin-left: 8rem;
 }
 
 .banner-content p {
-  margin-top: 220px;
+  margin-top: 180px;
   margin-left: 8rem;
   width: 35%;
+  font-size: 36px;
+
 }
 </style>

@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="bg-black">
-
     <side-bar />
 
     <router-view />
@@ -125,8 +124,7 @@ export default {
 </script>
 
 <style>
-@import url('./assets/css/style.css');
-
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Quantico:wght@400;700&display=swap");
 #app {
   font-family: "Orbitron", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -135,13 +133,52 @@ export default {
   color: #2c3e50;
 }
 
-side-bar {
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
+:root {
+  --light-blue: #41b2f1;
+  --dark-blue: #2f558c;
+  --white: rgba(238, 238, 238, 0.925);
 }
 
-/*text globals*/
+/* textos e fontes */
+.banner-content h1,
+.product-content h1,
+.highlights-content h1 {
+  font-size: 78px;
+  font-weight: 400;
+  text-align: initial;
+}
+
+.banner-content p,
+.product-content p,
+.highlights-content p {
+  font-size: 32px;
+  color: aliceblue;
+  text-align: initial;
+}
+
+.product-content span {
+  font-size: 22px;
+  color: #95a6be;
+}
+
+/* botões */
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bdbdbd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(90, 90, 90);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(61, 61, 61);
+}
 
 /* LOGO ANIMATION */
 
@@ -150,4 +187,20 @@ side-bar {
   animation: spin 2.6s linear infinite;
 }
 
+/* animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes filter-animation {
+  0% {
+    filter: hue-rotate(154deg) saturate(2);
+  }
+
+  100% {
+    filter: hue-rotate(0);
+  }
+}
 </style>
