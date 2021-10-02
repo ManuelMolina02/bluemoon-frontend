@@ -144,7 +144,7 @@ export default {
 .product-content h1,
 .highlights-content h1 {
   font-size: 78px;
-  font-weight: 400;
+  font-weight: bold;
   text-align: initial;
 }
 
