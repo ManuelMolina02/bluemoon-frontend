@@ -27,13 +27,14 @@
             href="https://www.instagram.com/manuuelmolinaa/"
             class="me-3 text-reset"
           >
-            <b-icon icon="instagram" font-scale="3" class="icon-contact"></b-icon>
+            <b-icon
+              icon="instagram"
+              font-scale="3"
+              class="icon-contact"
+            ></b-icon>
           </a>
 
-          <a
-            href="https://github.com/ManuelMolina02"
-            class="me-3 text-reset"
-          >
+          <a href="https://github.com/ManuelMolina02" class="me-3 text-reset">
             <b-icon icon="github" font-scale="3" class="icon-contact"></b-icon>
           </a>
 
@@ -41,7 +42,11 @@
             href="https://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/"
             class="me-3 text-reset"
           >
-            <b-icon icon="linkedin" font-scale="3" class="icon-contact"></b-icon>
+            <b-icon
+              icon="linkedin"
+              font-scale="3"
+              class="icon-contact"
+            ></b-icon>
           </a>
         </div>
       </div>
@@ -132,7 +137,7 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Quantico:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap");
 #app {
   font-family: "Orbitron", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -160,10 +165,9 @@ export default {
 .banner-content p,
 .product-content p,
 .highlights-content p {
-  font-family: "Oxygen", sans-serif;
+  font-family: "Raleway", sans-serif;
   letter-spacing: 1.6px;
   font-size: 32px;
-  font-weight: 300;
   color: aliceblue;
   text-align: initial;
 }
@@ -214,9 +218,9 @@ html {
   animation: spin 2.6s linear infinite;
 }
 
-.icon-contact:hover{
+.icon-contact:hover {
   color: #2f558c;
-  transition: linear .5s;
+  transition: linear 0.5s;
 }
 
 /* animations */

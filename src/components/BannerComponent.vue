@@ -22,10 +22,8 @@
       <img :src="missions.url" />
     </div>
     <div class="banner-content">
-      <h1 class="text-uppercase">
-        Descubra o<br>cosmos!
-      </h1>
-      <p>
+      <h1 class="text-uppercase">Descubra o<br />cosmos!</h1>
+      <p class='col-6'>
         {{ missions.explanation }}
       </p>
     </div>
@@ -55,13 +53,14 @@ export default {
 <style scoped>
 /* image banner configs */
 
-.background-image{
+.background-image {
   max-height: 900px;
 }
 
 .background-image img {
   width: 100%;
   height: 1060px;
+  object-fit: cover;
 
   position: relative;
   top: -100px;
@@ -93,22 +92,19 @@ export default {
 .banner-content p {
   margin-top: 12rem;
   margin-left: 4rem;
-  width: 40%;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   animation: fade-slide-in 4s;
 }
 
 @media screen and (max-width: 1400px) {
-
   .banner-content {
-  top: 7rem;
-}
+    top: 7rem;
+  }
 
   .banner-content p {
-  margin-top: 13rem;
-  width: 55%;
-}
-
+    margin-top: 13rem;
+    width: 65%;
+  }
 }
 
 @keyframes zoom {

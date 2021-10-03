@@ -24,7 +24,7 @@
       <!-- chamada para visualizar pesquisas e fotos de missões -->
       <div class="w-75 my-5 mx-auto">
         <div>
-          <h1 class=" my-5 mx-auto title text-white">
+          <h1 class="my-5 mx-auto title text-white">
             Clique em uma foto e visualize-a junto com uma breve explicação
             escrita por um astrônomo profissional.
           </h1>
@@ -38,7 +38,7 @@
     <div
       id="section-product"
       class="w-100 d-flex mx-auto"
-      style="background: rgba(20, 20, 20, 0.8); "
+      style="background: rgba(20, 20, 20, 0.8)"
     >
       <product-component />
     </div>
@@ -99,7 +99,6 @@ export default {
 </script>
 
 <style scoped>
-
 .div-image {
   background-color: #0e0e0e;
   position: relative;
@@ -113,7 +112,6 @@ export default {
   font-weight: 300;
   color: aliceblue;
   word-break: break-word;
-
 }
 /* HIGLIGHTS CONTAINER */
 

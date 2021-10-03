@@ -1,10 +1,6 @@
 <template>
   <div class="base-spinner" v-if="visible">
-    <img
-      class="logo"
-      src="../../assets/frame.svg"
-      alt=""
-    />
+    <img class="logo" src="../../assets/frame.svg" alt="" />
   </div>
 </template>
 
@@ -19,10 +15,13 @@ export default {
   },
 
   created() {
-    this.$root.$on('Spinner::show', () => { this.visible = true; });
-    this.$root.$on('Spinner::hide', () => { this.visible = false; });
+    this.$root.$on('Spinner::show', () => {
+      this.visible = true;
+    });
+    this.$root.$on('Spinner::hide', () => {
+      this.visible = false;
+    });
   },
-
 };
 </script>
 
@@ -43,7 +42,5 @@ export default {
   justify-content: center;
 
   background-color: rgba(19, 19, 19, 0.849);
-
 }
-
 </style>

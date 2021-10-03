@@ -1,6 +1,5 @@
 <template>
   <div class="highlights-container w-100 d-flex my-5 mx-auto">
-
     <div class="highlights-images w-50 my-5">
       <img
         class="w-100"
@@ -19,7 +18,10 @@
       </div>
     </div>
 
-    <div class="highlights-content text-white p-2 my-5 m-auto" style="width: 35%">
+    <div
+      class="highlights-content text-white p-2 my-5 m-auto"
+      style="width: 35%"
+    >
       <h1>Mars Missons</h1>
       <p>
         Follow every step of the Perseverance and Curiosity robots as they
@@ -28,7 +30,6 @@
 
       <a class="text-white" href="#"><span>lear more</span></a>
     </div>
-
   </div>
 </template>
 
@@ -123,21 +124,18 @@ export default {
 .highlights-images div img {
   position: relative;
   border-radius: 16px;
-    top: -176px;
-    left: -20px;
-    transition-duration: 1s;
-    transition-delay: .2s;
+  top: -176px;
+  left: -20px;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
 
   box-shadow: rgba(19, 19, 19, 0.4) -5px -5px,
-    rgba(19, 19, 19, 0.267)  -10px -10px, rgba(19, 19, 19, 0.267) -15px -15px,
+    rgba(19, 19, 19, 0.267) -10px -10px, rgba(19, 19, 19, 0.267) -15px -15px,
     rgba(31, 31, 31, 0.062) -20px -20px, rgba(31, 31, 31, 0.062) -25px -25px;
 }
 
 .highlights-images div img:hover {
-
-top: -160px;
-left: -16px;
-
+  top: -160px;
+  left: -12px;
 }
-
 </style>

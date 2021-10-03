@@ -1,6 +1,5 @@
 <template>
-  <div class="product-container w-100 d-flex my-5 mx-auto" >
-
+  <div class="product-container w-100 d-flex my-5 mx-auto">
     <div class="product-images w-50 m-5">
       <img
         class="w-100"
@@ -141,9 +140,8 @@ export default {
 }
 
 @media screen and (max-width: 1600px) {
-  .product-content{
+  .product-content {
     width: 50% !important;
   }
-
 }
 </style>
