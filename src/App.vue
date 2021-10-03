@@ -5,7 +5,7 @@
     <router-view />
 
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted">
+    <footer id="section-footer" class="text-center text-lg-start bg-light text-muted">
       <!-- cabeçalho do footer -->
       <div
         class="
@@ -125,6 +125,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Quantico:wght@400;700&display=swap");
+
 #app {
   font-family: "Orbitron", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -137,6 +138,11 @@ export default {
   --light-blue: #41b2f1;
   --dark-blue: #2f558c;
   --white: rgba(238, 238, 238, 0.925);
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 /* textos e fontes */

@@ -1,17 +1,20 @@
 <template>
   <div class="banner-container mx-auto">
-    <b-card
-      overlay
-      :img-src="missions.url"
-      img-height="820px"
-      text-variant="white"
-      style="border: none !important"
-    >
-      <b-card-text class="banner-content m-5">
-        <h1 class="text-uppercase">{{ missions.title }}</h1>
-        <p>{{ missions.explanation }}</p>
-      </b-card-text>
-    </b-card>
+
+    <div class="banner-container">
+      <div class="background-image">
+        <img :src="missions.url" />
+      </div>
+
+      <div class="banner-content">
+        <h1 class="text-uppercase">
+          {{ missions.title }}
+        </h1>
+        <p>
+          {{ missions.explanation }}
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -35,26 +38,68 @@ export default {
   },
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+
 <style scoped>
-.banner-container {
-  border: none !important;
+/* image banner configs */
+
+.background-image img {
+  width: 100%;
+  height: 820px;
+  display: block;
+
+  animation: zoom 25s linear infinite;
+}
+
+/* content banner configs */
+
+.banner-content {
+  position: absolute;
+  top: 10rem;
+  left: 3rem;
+  z-index: 1000;
 }
 
 .banner-content h1 {
-  font-family: 'Audiowide', cursive;
+  font-family: "Audiowide", cursive;
   color: var(--white);
   width: 40%;
   font-size: 118px;
   font-weight: 400;
   margin-left: 8rem;
+  animation: fade-slide-in 4s;
 }
 
 .banner-content p {
+
   margin-top: 180px;
   margin-left: 8rem;
   width: 35%;
   font-size: 36px;
+  animation: fade-slide-in 4s;
+}
 
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.3);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>

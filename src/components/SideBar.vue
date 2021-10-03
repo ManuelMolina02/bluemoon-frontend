@@ -1,7 +1,11 @@
 <template>
   <div>
     <!-- HEADER CONTAINER -->
-    <div v-b-toggle.sidebar-no-header class="p-4" style="background-color:#0e0e0ed1">
+    <div
+      v-b-toggle.sidebar-no-header
+      class="p-4"
+      style="background-color: #0e0e0ed1; position: relative; z-index: 1000"
+    >
       <!-- moon orbiting -->
       <img
         class="logo"
@@ -25,6 +29,7 @@
       aria-labelledby="sidebar-no-header-title"
       bg-variant="dark"
       text-variant="light"
+      no-enforce-focus
       no-header
       shadow
       right
@@ -40,9 +45,15 @@
           <!-- sidebar content -->
           <nav class="mb-3">
             <b-nav vertical class="m-4" style="text-align: initial">
-              <b-nav-item href="#banner-container" @click="hide"
-                >Link</b-nav-item
-              >
+              <b-nav-item href="#section-home" @click="hide">Inicio</b-nav-item>
+
+              <b-nav-item href="#section-gallery" @click="hide">Galeria</b-nav-item>
+
+              <b-nav-item href="#section-product" @click="hide">Produto</b-nav-item>
+
+              <b-nav-item href="#section-highlights" @click="hide">Destaques</b-nav-item>
+
+              <b-nav-item href="#section-form" @click="hide">Formulário</b-nav-item>
             </b-nav>
           </nav>
         </div>
@@ -59,5 +70,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>

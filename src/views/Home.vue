@@ -3,10 +3,10 @@
     <!--  CONTAINER -->
 
     <!-- card de apresentação -->
-    <banner-component />
+    <banner-component id="section-home" />
 
     <!-- div image -->
-    <div style="background-color: #0e0e0e">
+    <div style="background-color: #0e0e0e; position: relative">
       <img
         class="my-5 py-5 w-50"
         src="../assets/text-content.svg"
@@ -17,7 +17,7 @@
 
     <!-- CAROUSEL CONTAINER -->
     <div
-      id="carousel-container"
+      id="section-gallery"
       class="py-5"
       style="background: rgba(20, 20, 20, 0.5)"
     >
@@ -36,6 +36,7 @@
 
     <!-- PRODUCT CONTAINER-->
     <div
+      id="section-product"
       class="highlights-container w-100 d-flex mx-auto"
       style="background: rgba(20, 20, 20, 0.8)"
     >
@@ -44,13 +45,14 @@
 
     <!-- HIGHLIGHTS CONTAINER-->
     <div
+      id="section-highlights"
       class="highlights-container w-100 d-flex mx-auto"
       style="background: rgba(20, 20, 20, 0.8)"
     >
       <cards-highlights-component />
     </div>
 
-    <form-component />
+    <form-component id="section-form" />
   </div>
 </template>
 
