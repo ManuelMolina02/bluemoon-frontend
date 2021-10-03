@@ -13,8 +13,7 @@
         v-for="mission in missions"
         :key="mission.title"
         :img-src="mission.url"
-        class="d-block"
-        style="max-width: 860px; max-height: 380px;"
+        class="carousel-img"
       >
       </b-carousel-slide>
     </b-carousel>
@@ -32,8 +31,7 @@
         v-for="mission in missions"
         :key="mission.title"
         :img-src="mission.url"
-        class="img-fluid d-block"
-        style="max-width: 860px; max-height: 380px;"
+        class="carousel-img"
       >
       </b-carousel-slide>
     </b-carousel>
@@ -51,8 +49,7 @@
         v-for="mission in missions"
         :key="mission.title"
         :img-src="mission.url"
-        class="img-fluid d-block"
-        style="max-width: 860px; max-height: 380px;"
+        class="carousel-img"
       >
       </b-carousel-slide>
     </b-carousel>
@@ -171,7 +168,7 @@ export default {
   async created() {
     await axios
       .get(
-        'https://api.nasa.gov/planetary/apod?start_date=2021-09-10&end_date=2021-09-16&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
+        'https://api.nasa.gov/planetary/apod?start_date=2021-09-12&end_date=2021-09-16&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
       )
       .then((response) => {
         this.missions = response.data;
@@ -186,42 +183,18 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* CAROUSEL CONTAINER */
-.carousel-container {
-  align-items: center;
-}
-
-.carousel-content .carousel-inner {
-  height: 400px;
-}
 
 .carousel-content {
   filter: grayscale(100%);
   cursor: pointer;
+  transition: ease-in-out 1s;
 
   border-top: 2px solid rgb(112, 112, 112) !important;
   border-bottom: 2px solid rgb(112, 112, 112) !important;
 }
 
 .carousel-content:hover {
-  transition-delay: 1s;
-  animation: filter-animation 1s forwards;
-}
-
-.carousel-item img {
-  width: 100% !important;
-  height: 368px !important;
-
-  background-size: cover !important;
-}
-
-@keyframes filter-animation {
-  0% {
-    filter: hue-rotate(154deg) saturate(2);
-  }
-
-  100% {
-    filter: hue-rotate(0);
-  }
+  filter: grayscale(0);
 }
 
 .card {
@@ -256,5 +229,12 @@ export default {
 .carousel-content:nth-child(3) {
   border-left: 1px solid rgb(112, 112, 112) !important;
   border-right: 2px solid rgb(112, 112, 112) !important;
+}
+
+.carousel-img {
+  width: calc(100vw / 3);
+  height: 46vh;
+  transition: linear 2s;
+  object-fit: cover !important;
 }
 </style>
