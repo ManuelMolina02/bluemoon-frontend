@@ -6,10 +6,10 @@
     <banner-component id="section-home" />
 
     <!-- div image -->
-    <div style="background-color: #0e0e0e; position: relative">
+    <div class="div-image">
       <img
         class="my-5 py-5 w-50"
-        src="../assets/text-content.svg"
+        src="../assets/text-cont.svg"
         alt=""
         style="background-color: #0e0e0e"
       />
@@ -24,7 +24,7 @@
       <!-- chamada para visualizar pesquisas e fotos de missões -->
       <div class="w-75 my-5 mx-auto">
         <div>
-          <h1 class="w-50 my-5 mx-auto title text-white">
+          <h1 class=" my-5 mx-auto title text-white">
             Clique em uma foto e visualize-a junto com uma breve explicação
             escrita por um astrônomo profissional.
           </h1>
@@ -37,8 +37,8 @@
     <!-- PRODUCT CONTAINER-->
     <div
       id="section-product"
-      class="highlights-container w-100 d-flex mx-auto"
-      style="background: rgba(20, 20, 20, 0.8)"
+      class="w-100 d-flex mx-auto"
+      style="background: rgba(20, 20, 20, 0.8); "
     >
       <product-component />
     </div>
@@ -52,6 +52,7 @@
       <cards-highlights-component />
     </div>
 
+    <!-- HIGHLIGHTS CONTAINER-->
     <form-component id="section-form" />
   </div>
 </template>
@@ -98,12 +99,22 @@ export default {
 </script>
 
 <style scoped>
-.title {
-  font-size: 36px;
-  line-height: 66px;
-  letter-spacing: 0.16em;
-}
 
+.div-image {
+  background-color: #0e0e0e;
+  position: relative;
+}
+.title {
+  width: 70%;
+  font-family: "Oxygen", sans-serif;
+
+  letter-spacing: 6px;
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: aliceblue;
+  word-break: break-word;
+
+}
 /* HIGLIGHTS CONTAINER */
 
 .highlights-content {

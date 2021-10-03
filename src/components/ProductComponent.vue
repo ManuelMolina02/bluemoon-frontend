@@ -1,6 +1,7 @@
 <template>
-  <div class="product-container w-100 d-flex my-5 mx-auto">
-    <div class="product-images w-50 my-5">
+  <div class="product-container w-100 d-flex my-5 mx-auto" >
+
+    <div class="product-images w-50 m-5">
       <img
         class="w-100"
         style="max-width: 568px"
@@ -9,7 +10,7 @@
       />
     </div>
 
-    <div class="product-content text-white p-2 my-5" style="width: 35%">
+    <div class="product-content text-white p-2 m-5" style="width: 45%">
       <div class="product-item my-4 py-2">
         <div class="w-75 d-flex">
           <h1>+10.000</h1>
@@ -133,9 +134,16 @@ export default {
   padding-right: 5rem !important;
 }
 
-.product-images > img {
-  position: sticky;
+.product-images img {
+  position: sticky !important;
   border-radius: 8px;
   top: 32px;
+}
+
+@media screen and (max-width: 1600px) {
+  .product-content{
+    width: 50% !important;
+  }
+
 }
 </style>

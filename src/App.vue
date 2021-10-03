@@ -1,11 +1,14 @@
 <template>
-  <div id="app" class="bg-black">
+  <div id="app">
     <side-bar />
 
     <router-view />
 
     <!-- Footer -->
-    <footer id="section-footer" class="text-center text-lg-start bg-light text-muted">
+    <footer
+      id="section-footer"
+      class="text-center text-lg-start bg-light text-muted"
+    >
       <!-- cabeçalho do footer -->
       <div
         class="
@@ -16,7 +19,7 @@
         "
       >
         <div class="me-5 d-none d-lg-block">
-          <span>Connect me on social media:</span>
+          <span>Me contate nas redes sociais:</span>
         </div>
 
         <div>
@@ -24,18 +27,21 @@
             href="https://www.instagram.com/manuuelmolinaa/"
             class="me-3 text-reset"
           >
-            <b-icon icon="instagram" font-scale="3"></b-icon>
+            <b-icon icon="instagram" font-scale="3" class="icon-contact"></b-icon>
           </a>
 
-          <a href="https://github.com/ManuelMolina02" class="me-3 text-reset">
-            <b-icon icon="github" font-scale="3"></b-icon>
+          <a
+            href="https://github.com/ManuelMolina02"
+            class="me-3 text-reset"
+          >
+            <b-icon icon="github" font-scale="3" class="icon-contact"></b-icon>
           </a>
 
           <a
             href="https://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/"
             class="me-3 text-reset"
           >
-            <b-icon icon="linkedin" font-scale="3"></b-icon>
+            <b-icon icon="linkedin" font-scale="3" class="icon-contact"></b-icon>
           </a>
         </div>
       </div>
@@ -50,13 +56,13 @@
               </h6>
 
               <p>
-                This site was developed with the purpose of providing tracking
-                of space missions
+                Um site que faz divulgações de fotos e pesquisas do mundo
+                intergalático!
               </p>
             </div>
             <!-- tecnologias utilizadas -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">technologies</h6>
+              <h6 class="text-uppercase fw-bold mb-4">tecnologias</h6>
               <p>
                 <a href="https://vuejs.org/" class="text-reset">Vue</a>
               </p>
@@ -71,15 +77,15 @@
             </div>
 
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <h6 class="text-uppercase fw-bold mb-4">links úteis</h6>
               <p>
-                <a href="#!" class="text-reset">About</a>
+                <a href="#!" class="text-reset">Sobre</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Highlights</a>
+                <a href="#!" class="text-reset">Destaque</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Form</a>
+                <a href="#!" class="text-reset">Formulário</a>
               </p>
             </div>
 
@@ -101,7 +107,7 @@
         class="text-center p-4"
         style="background-color: rgba(0, 0, 0, 0.05)"
       >
-        © 2021 Developed by Manuel Molina:
+        © 2021 Developed by Manuel Molina
       </div>
     </footer>
   </div>
@@ -125,6 +131,7 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Quantico:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap");
 
 #app {
   font-family: "Orbitron", sans-serif;
@@ -132,17 +139,13 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #0e0e0e;
 }
 
 :root {
   --light-blue: #41b2f1;
   --dark-blue: #2f558c;
   --white: rgba(238, 238, 238, 0.925);
-}
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
 }
 
 /* textos e fontes */
@@ -157,7 +160,10 @@ html, body {
 .banner-content p,
 .product-content p,
 .highlights-content p {
+  font-family: "Oxygen", sans-serif;
+  letter-spacing: 1.6px;
   font-size: 32px;
+  font-weight: 300;
   color: aliceblue;
   text-align: initial;
 }
@@ -168,6 +174,11 @@ html, body {
 }
 
 /* botões */
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -188,9 +199,24 @@ html, body {
 
 /* LOGO ANIMATION */
 
-/* moon animation orbiting */
 .logo {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin: 1.4rem;
+}
+
+/* moon animation orbiting */
+.moon-image {
   animation: spin 2.6s linear infinite;
+}
+
+.icon-contact:hover{
+  color: #2f558c;
+  transition: linear .5s;
 }
 
 /* animations */

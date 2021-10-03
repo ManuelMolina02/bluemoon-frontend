@@ -123,8 +123,8 @@ export default {
 .highlights-images div img {
   position: relative;
   border-radius: 16px;
-    top: -132px;
-    left: 140px;
+    top: -176px;
+    left: -20px;
     transition-duration: 1s;
     transition-delay: .2s;
 
@@ -135,8 +135,8 @@ export default {
 
 .highlights-images div img:hover {
 
-    top: -152px;
-    left: 44px;
+top: -160px;
+left: -16px;
 
 }
 

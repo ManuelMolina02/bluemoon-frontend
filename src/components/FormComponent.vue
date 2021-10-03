@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #0e0e0e" class="pb-5">
+  <div style="background-color: #0e0e0e" class="my-5 py-5 pb-5">
     <!-- form card -->
     <div
       class="w-50 mx-auto text-white text-start p-5"
@@ -92,4 +92,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+textarea{
+  max-height:160px ;
+}
 </style>
