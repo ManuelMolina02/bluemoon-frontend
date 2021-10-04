@@ -10,7 +10,7 @@
     </div>
 
     <div class="product-content text-white m-5" style="width: 45%">
-      <div class="product-item py-2">
+      <div class="product-item pb-2">
         <div class="w-75 d-flex">
           <h1>+10.000</h1>
           <span>publicações</span>
@@ -36,38 +36,38 @@
 
       <div class="product-item pb-4">
         <div class="w-75 d-flex">
-          <h1>+100</h1>
+          <h1>+80</h1>
           <span>colaboradores</span>
         </div>
 
         <p class="py-3">
           Conteúdos atualizados e explicativos fornecidos por uma equipe de
           pesquisadores e redatores que atuam tornando as matérias acessíveis a
-          todos os publicos.
+          todos os públicos.
         </p>
       </div>
 
       <div class="product-item pb-4">
         <div class="w-75 d-flex">
-          <h1>+32.000</h1>
-          <span>cadastros realizados</span>
+          <h1>+22</h1>
+          <span>prêmios internacionais</span>
         </div>
 
         <p class="py-3">
-          Faça parte da nossa comunidade apaixonada pelo espaço e participe das
-          trocas de conhecimento que ocorrem nos fóruns.
+          Reconhecidos amplamente por ser uma plataforma simples e interativa
+          que tem como objetivo detalhar a rotina dos nossos astronautas.
         </p>
       </div>
 
       <div class="product-item pb-4">
         <div class="w-75 d-flex">
-          <h1>+32.000</h1>
-          <span>cadastros realizados</span>
+          <h1>+16</h1>
+          <span>países</span>
         </div>
 
         <p class="py-3">
-          Faça parte da nossa comunidade apaixonada pelo espaço e participe das
-          trocas de conhecimento que ocorrem nos fóruns.
+          Tenha acesso exclusivo a materiais escritos em português, inglês e
+          espanhol afinal de contas a ciência não tem fronteiras.
         </p>
       </div>
     </div>

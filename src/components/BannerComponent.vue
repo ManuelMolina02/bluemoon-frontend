@@ -23,7 +23,7 @@
     </div>
     <div class="banner-content">
       <h1 class="text-uppercase">Descubra o<br />cosmos!</h1>
-      <p class='col-6'>
+      <p class="col-6">
         {{ banner.explanation }}
       </p>
     </div>
@@ -37,7 +37,6 @@ export default {
   data() {
     return {
       banner: {
-
         explanation:
           'A cada dia, uma imagem ou fotografia diferente de nosso fascinante universo é apresentada, junto com uma breve explicação escrita por um astrônomo profissional.',
         url: 'https://img.wallpapersafari.com/desktop/1920/1080/76/67/HsdRS0.jpg',

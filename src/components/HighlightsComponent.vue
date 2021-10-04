@@ -22,20 +22,20 @@
       class="highlights-content text-white p-2 my-5 m-auto"
       style="width: 35%"
     >
-      <h1>Mars Missons</h1>
+      <h1>Missões em Marte</h1>
       <p>
-        Follow every step of the Perseverance and Curiosity robots as they
-        explore the red planet
+        Siga cada passo dos robôs Perseverance e Curiosity na jornada de
+        exploração no planeta vermelho.
       </p>
 
-      <a class="text-white" href="#"><span>lear more</span></a>
+      <a class="text-white" href="#"><span>saiba mais</span></a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CardsHighlightsComponent',
+  name: 'HighlightsComponent',
   data() {
     return {
       missions: {

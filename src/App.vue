@@ -19,7 +19,7 @@
         "
       >
         <div class="me-5 d-none d-lg-block">
-          <span>Me contate nas redes sociais:</span>
+          <span>Me contate através das redes sociais:</span>
         </div>
 
         <div>
@@ -62,7 +62,7 @@
 
               <p>
                 Um site que faz divulgações de fotos e pesquisas do mundo
-                intergalático!
+                intergaláctico!
               </p>
             </div>
             <!-- tecnologias utilizadas -->
@@ -97,12 +97,9 @@
             <!-- Contact -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
               <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-              <p><i class="fas fa-home me-3"></i> Florianópolis, SC, BR</p>
-              <p>
-                <i class="fas fa-envelope me-3"></i>
-                info@example.com
-              </p>
-              <p><i class="fas fa-phone me-3"></i> (48) 99646-2015</p>
+              <p>Florianópolis, SC, BR</p>
+              <p>info@example.com</p>
+              <p>(48) 99646-2015</p>
             </div>
           </div>
         </div>
@@ -164,7 +161,8 @@ export default {
 
 .banner-content p,
 .product-content p,
-.highlights-content p {
+.highlights-content p,
+.form-container p {
   font-family: "Raleway", sans-serif;
   letter-spacing: 1.6px;
   font-size: 32px;

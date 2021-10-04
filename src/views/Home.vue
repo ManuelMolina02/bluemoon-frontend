@@ -4,9 +4,6 @@
 
     <!-- card de apresentação -->
 
-    <div>
-
-    </div>
     <banner-component id="section-home" />
 
     <!-- div image -->
@@ -52,11 +49,18 @@
       class="highlights-container w-100 d-flex mx-auto"
       style="background: rgba(20, 20, 20, 0.8)"
     >
-      <cards-highlights-component />
+      <highlights-component />
     </div>
 
-    <!-- HIGHLIGHTS CONTAINER-->
-    <form-component id="section-form" />
+    <!-- FORM CONTAINER-->
+
+    <div id="section-form" class="form-container py-5 my-5">
+      <p class="w-50 mx-auto text-center">
+        Realize agora o seu cadastro para receber mais informações sobre como
+        ficar por dentro das últimas notícias do mundo intergaláctico!
+      </p>
+      <form-component />
+    </div>
   </div>
 </template>
 
@@ -64,7 +68,7 @@
 import BannerComponent from '@/components/BannerComponent.vue';
 import CarouselComponent from '@/components/CarouselComponent.vue';
 import FormComponent from '@/components/FormComponent.vue';
-import CardsHighlightsComponent from '@/components/CardsHighlightsComponent.vue';
+import HighlightsComponent from '@/components/HighlightsComponent.vue';
 import ProductComponent from '@/components/ProductComponent.vue';
 
 const axios = require('axios').default;
@@ -95,7 +99,7 @@ export default {
     BannerComponent,
     CarouselComponent,
     FormComponent,
-    CardsHighlightsComponent,
+    HighlightsComponent,
     ProductComponent,
   },
 };
