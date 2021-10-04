@@ -89,7 +89,7 @@ export default {
 }
 
 .banner-content p {
-  margin-top: 12rem;
+  margin-top: 10rem;
   margin-left: 4rem;
   font-size: 2.6rem;
   animation: fade-slide-in 4s;

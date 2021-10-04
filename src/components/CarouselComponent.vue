@@ -5,56 +5,50 @@
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      :interval="3000"
+      :interval="3500"
     >
-      <!-- CAROUSEL IMAGES -->
-      <b-carousel-slide
-        v-b-modal.primaryPublication
+      <div
+        role="listitem"
+        class="carousel-item"
         v-for="mission in missions"
         :key="mission.title"
-        :img-src="mission.url"
-        class="carousel-img"
       >
-      </b-carousel-slide>
+        <img :src="mission.url" class="carousel-img" />
+      </div>
     </b-carousel>
-
     <b-carousel
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      :interval="3100"
+      :interval="3700"
     >
-      <!-- CAROUSEL IMAGES -->
-      <b-carousel-slide
-        v-b-modal.secondPublication
+      <div
+        role="listitem"
+        class="carousel-item"
         v-for="mission in missions"
         :key="mission.title"
-        :img-src="mission.url"
-        class="carousel-img"
       >
-      </b-carousel-slide>
+        <img :src="mission.url" class="carousel-img" />
+      </div>
     </b-carousel>
-
     <b-carousel
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
       indicators
-      :interval="3200"
+      :interval="4000"
     >
-      <!-- CAROUSEL IMAGES -->
-      <b-carousel-slide
-        v-b-modal.thirdPublication
-        v-for="mission in missions"
-        :key="mission.title"
-        :img-src="mission.url"
-        class="carousel-img"
+      <div
+        role="listitem"
+        class="carousel-item"
+        v-for="data in datas"
+        :key="data.title"
       >
-      </b-carousel-slide>
+        <img :src="data.url" class="carousel-img" />
+      </div>
     </b-carousel>
 
-    <!-- MODAL CONTENT -->
     <b-modal
       id="primaryPublication"
       centered
@@ -71,81 +65,17 @@
       ok-variant="outline-secondary w-50"
       ok-title="Close"
     >
-      <div class="mb-4" v-for="mission in missions" :key="mission.title">
+      <div class="mb-4" v-for="data in datas" :key="data.title">
         <b-card
           class="my-3 text-white bg-dark"
-          :img-src="mission.url"
+          :img-src="data.url"
           img-top
           img-alt="Card image"
           img-width="600px"
         >
           <b-card-text>
-            <h3>{{ mission.title }}</h3>
-            <p>{{ mission.explanation }}</p>
-          </b-card-text>
-        </b-card>
-      </div>
-    </b-modal>
-
-    <b-modal
-      id="secondPublication"
-      centered
-      scrollable
-      ok-only
-      hide-header
-      button-size="lg"
-      size="lg"
-      title="Primary Content"
-      header-class="text-white bg-dark"
-      body-class="text-white bg-dark "
-      footer-class="text-white bg-dark justify-content-center"
-      content-class="bg-dark"
-      ok-variant="outline-secondary w-50"
-      ok-title="Close"
-    >
-      <div class="mb-4" v-for="mission in missions" :key="mission.title">
-        <b-card
-          class="my-3 text-white bg-dark"
-          :img-src="mission.url"
-          img-top
-          img-alt="Card image"
-          img-width="600px"
-        >
-          <b-card-text>
-            <h3>{{ mission.title }}</h3>
-            <p>{{ mission.explanation }}</p>
-          </b-card-text>
-        </b-card>
-      </div>
-    </b-modal>
-
-    <b-modal
-      id="thirdPublication"
-      centered
-      scrollable
-      ok-only
-      hide-header
-      button-size="lg"
-      size="lg"
-      title="Primary Content"
-      header-class="text-white bg-dark"
-      body-class="text-white bg-dark "
-      footer-class="text-white bg-dark justify-content-center"
-      content-class="bg-dark"
-      ok-variant="outline-secondary w-50"
-      ok-title="Close"
-    >
-      <div class="mb-4" v-for="mission in missions" :key="mission.title">
-        <b-card
-          class="my-3 text-white bg-dark"
-          :img-src="mission.url"
-          img-top
-          img-alt="Card image"
-          img-width="600px"
-        >
-          <b-card-text>
-            <h3>{{ mission.title }}</h3>
-            <p>{{ mission.explanation }}</p>
+            <h3>{{ data.title }}</h3>
+            <p>{{ data.explanation }}</p>
           </b-card-text>
         </b-card>
       </div>
@@ -154,6 +84,8 @@
 </template>
 
 <script>
+import dataFake from '../../data-fake.json';
+
 const axios = require('axios').default;
 
 export default {
@@ -162,6 +94,7 @@ export default {
   data() {
     return {
       missions: {},
+      datas: dataFake,
     };
   },
 
@@ -184,19 +117,35 @@ export default {
 <style scoped>
 /* CAROUSEL CONTAINER */
 
+.carousel-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .carousel-content {
   filter: grayscale(100%);
   cursor: pointer;
   transition: ease-in-out 1s;
+  border: solid 2px #333333;
 
-  border-top: 2px solid rgb(112, 112, 112) !important;
-  border-bottom: 2px solid rgb(112, 112, 112) !important;
 }
 
 .carousel-content:hover {
   filter: grayscale(0);
 }
 
+.carousel-img {
+  width: calc(100vw / 3) !important;
+  height: 40vh;
+
+  object-fit: cover !important;
+}
+
+.carousel-item {
+  transition: linear 2s;
+}
+
+/* MODAL */
 .card {
   border: 1px solid rgb(0 0 0 / 25%);
   border-top-left-radius: calc(1.25rem - -1px);
@@ -214,27 +163,4 @@ export default {
   background-size: cover;
 }
 
-/*border carousel*/
-
-.carousel-content:nth-child(1) {
-  border-left: 2px solid rgb(112, 112, 112) !important;
-  border-right: 1px solid rgb(112, 112, 112) !important;
-}
-
-.carousel-content:nth-child(2) {
-  border-left: 1px solid rgb(112, 112, 112) !important;
-  border-right: 1px solid rgb(112, 112, 112) !important;
-}
-
-.carousel-content:nth-child(3) {
-  border-left: 1px solid rgb(112, 112, 112) !important;
-  border-right: 2px solid rgb(112, 112, 112) !important;
-}
-
-.carousel-img {
-  width: calc(100vw / 3);
-  height: 46vh;
-  transition: linear 2s;
-  object-fit: cover !important;
-}
 </style>
