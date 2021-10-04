@@ -19,12 +19,12 @@
     </div>
 
     <div class="background-image">
-      <img :src="missions.url" />
+      <img :src="banner.url" />
     </div>
     <div class="banner-content">
       <h1 class="text-uppercase">Descubra o<br />cosmos!</h1>
       <p class='col-6'>
-        {{ missions.explanation }}
+        {{ banner.explanation }}
       </p>
     </div>
   </div>
@@ -36,13 +36,10 @@ export default {
 
   data() {
     return {
-      missions: {
-        copyright: 'CARA Project',
-        date: '2021-09-10',
+      banner: {
+
         explanation:
           'A cada dia, uma imagem ou fotografia diferente de nosso fascinante universo é apresentada, junto com uma breve explicação escrita por um astrônomo profissional.',
-        media_type: 'image',
-        service_version: 'v1',
         url: 'https://img.wallpapersafari.com/desktop/1920/1080/76/67/HsdRS0.jpg',
       },
     };

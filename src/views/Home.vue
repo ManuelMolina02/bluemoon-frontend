@@ -3,13 +3,17 @@
     <!--  CONTAINER -->
 
     <!-- card de apresentação -->
+
+    <div>
+
+    </div>
     <banner-component id="section-home" />
 
     <!-- div image -->
     <div class="div-image">
       <img
-        class="my-5 py-5 w-50"
-        src="../assets/text-cont.svg"
+        class="my-5 py-5 col-6"
+        src="../assets/img-div.svg"
         alt=""
         style="background-color: #0e0e0e"
       />
@@ -21,7 +25,6 @@
       class="py-5"
       style="background: rgba(20, 20, 20, 0.5)"
     >
-      <!-- chamada para visualizar pesquisas e fotos de missões -->
       <div class="w-75 my-5 mx-auto">
         <div>
           <h1 class="my-5 mx-auto title text-white">
