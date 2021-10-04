@@ -147,14 +147,15 @@ export default {
 :root {
   --light-blue: #41b2f1;
   --dark-blue: #2f558c;
-  --white: rgba(238, 238, 238, 0.925);
+  --white: #eeeeeeec;
+  --text-white: #dae8f5
 }
 
 /* textos e fontes */
 .banner-content h1,
 .product-content h1,
 .highlights-content h1 {
-  font-size: 78px;
+  font-size: 4.8rem;
   font-weight: bold;
   text-align: initial;
 }
@@ -166,7 +167,7 @@ export default {
   font-family: "Raleway", sans-serif;
   letter-spacing: 1.6px;
   font-size: 32px;
-  color: aliceblue;
+  color: var(--text-white);
   text-align: initial;
 }
 
@@ -236,5 +237,32 @@ html {
   100% {
     filter: hue-rotate(0);
   }
+}
+
+/* RESPONSIVE */
+
+/*texts*/
+@media screen and (max-width: 1400px) {
+  .banner-content h1,
+  .product-content h1,
+  .highlights-content h1 {
+    font-size: 58px;
+  }
+
+  .banner-content p,
+  .product-content p,
+  .highlights-content p,
+  .form-container p {
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 1.6px;
+    font-size: 1.6rem;
+    color: aliceblue;
+    text-align: initial;
+  }
+
+  .product-content span {
+    font-size: 1.1rem;
+  }
+
 }
 </style>

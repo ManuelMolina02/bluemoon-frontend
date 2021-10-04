@@ -22,7 +22,7 @@
       class="highlights-content text-white p-2 my-5 m-auto"
       style="width: 35%"
     >
-      <h1>Missões em Marte</h1>
+      <h1 style="color: #007fe4">Missões em Marte</h1>
       <p>
         Siga cada passo dos robôs Perseverance e Curiosity na jornada de
         exploração no planeta vermelho.
@@ -77,8 +77,8 @@ export default {
   position: relative;
   transition: all 0.35s;
 
-  font-size: 42px;
-  letter-spacing: 3px;
+  font-size: 2.6rem;
+  letter-spacing: 5px;
   border: solid 2px white;
   border-radius: 0;
 
@@ -103,7 +103,7 @@ export default {
 }
 
 .highlights-content a:hover {
-  color: var(--dark-blue) !important;
+  color: #007fe4 !important;
   font-weight: bold;
   border: solid 2px white;
 }
@@ -137,5 +137,9 @@ export default {
 .highlights-images div img:hover {
   top: -160px;
   left: -12px;
+}
+
+@media screen and (max-width: 1400px) {
+
 }
 </style>

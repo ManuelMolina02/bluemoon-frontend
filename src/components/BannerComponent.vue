@@ -21,6 +21,7 @@
     <div class="background-image">
       <img :src="banner.url" />
     </div>
+
     <div class="banner-content">
       <h1 class="text-uppercase">Descubra o<br />cosmos!</h1>
       <p class="col-6">
@@ -49,7 +50,9 @@ export default {
 <style scoped>
 /* image banner configs */
 
+/*limitar alty*/
 .background-image {
+
   max-height: 900px;
 }
 

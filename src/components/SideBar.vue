@@ -87,6 +87,6 @@ export default {
 }
 
 .nav-link {
-  color: var(--light-blue);
+  color: #007fe4;
 }
 </style>

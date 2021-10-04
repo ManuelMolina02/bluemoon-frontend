@@ -115,9 +115,10 @@ export default {
 }
 
 .product-content h1 {
-  color: var(--light-blue);
+  color: #007fe4;
   line-height: 0.88;
   margin-bottom: 0 !important;
+  padding-right: .5rem;
 }
 
 .product-content span {
@@ -127,9 +128,6 @@ export default {
 
 .product-content p {
   font-size: 28px;
-  color: rgb(218, 232, 245);
-  font-family: Quantico;
-
   padding-right: 5rem !important;
 }
 
