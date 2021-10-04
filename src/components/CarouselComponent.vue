@@ -1,6 +1,7 @@
 <template>
   <div class="carousel-container d-flex my-5 py-5">
     <b-carousel
+            v-b-modal.primaryPublication
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
@@ -16,7 +17,9 @@
         <img :src="mission.url" class="carousel-img" />
       </div>
     </b-carousel>
+
     <b-carousel
+            v-b-modal.primaryPublication
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
@@ -32,7 +35,9 @@
         <img :src="mission.url" class="carousel-img" />
       </div>
     </b-carousel>
+
     <b-carousel
+      v-b-modal.primaryPublication
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
@@ -71,7 +76,7 @@
           :img-src="data.url"
           img-top
           img-alt="Card image"
-          img-width="600px"
+          img-width="700px"
         >
           <b-card-text>
             <h3>{{ data.title }}</h3>
