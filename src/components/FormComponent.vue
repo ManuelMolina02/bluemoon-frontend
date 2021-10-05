@@ -6,87 +6,55 @@
       style="border: solid 2px white; border-radius: 4px"
     >
       <form>
-        <!-- 2 column grid layout with text inputs for the first and last names -->
         <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
-              <input type="text" id="form6Example1" class="form-control" />
-              <label class="form-label" for="form6Example1">First name</label>
+              <label class="form-label" for="form6Example1">Nome</label>
+              <input type="text" class="form-control" />
             </div>
           </div>
           <div class="col">
             <div class="form-outline">
-              <input type="text" id="form6Example2" class="form-control" />
-              <label class="form-label" for="form6Example2">Last name</label>
+              <label class="form-label">Sobrenome</label>
+              <input type="text" class="form-control" />
             </div>
           </div>
         </div>
 
-        <!-- Text input -->
         <div class="form-outline mb-4">
-          <input type="text" id="form6Example3" class="form-control" />
-          <label class="form-label" for="form6Example3">Company name</label>
+          <label class="form-label">Endereço</label>
+          <input type="text" class="form-control" />
         </div>
 
-        <!-- Text input -->
         <div class="form-outline mb-4">
-          <input type="text" id="form6Example4" class="form-control" />
-          <label class="form-label" for="form6Example4">Address</label>
+          <label class="form-label">E-mail</label>
+          <input type="email" class="form-control" />
         </div>
 
-        <!-- Email input -->
         <div class="form-outline mb-4">
-          <input type="email" id="form6Example5" class="form-control" />
-          <label class="form-label" for="form6Example5">Email</label>
+          <label class="form-label">Telefone</label>
+          <input type="number" class="form-control" />
         </div>
 
-        <!-- Number input -->
         <div class="form-outline mb-4">
-          <input type="number" id="form6Example6" class="form-control" />
-          <label class="form-label" for="form6Example6">Phone</label>
+          <label class="form-label">Informações Adicionais</label>
+          <textarea class="form-control" rows="4"></textarea>
         </div>
 
-        <!-- Message input -->
-        <div class="form-outline mb-4">
-          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
-          <label class="form-label" for="form6Example7"
-            >Additional information</label
-          >
-        </div>
+        <div class="form-check form-switch d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" checked />
 
-        <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
-          <input
-            class="form-check-input me-2"
-            type="checkbox"
-            value=""
-            id="form6Example8"
-            checked
-          />
-          <label class="form-check-label" for="form6Example8">
-            Create an account?
+          <label class="form-check-label">
+            Li e aceito os termos de uso.
           </label>
         </div>
 
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">
-          Place order
-        </button>
-      </form>
-
-      <div class="col-auto">
-        <div class="form-check form-switch">
-          <input
-            class="form-check-input"
-            type="checkbox"
-            id="form11Example4"
-            checked
-          />
-          <label class="form-check-label" for="form11Example4"
-            >Checked switch checkbox input</label
-          >
+        <div class="w-100 d-flex justify-content-center">
+          <button type="submit" class="btn btn-primary btn-block btn-lg mb-4">
+            enviar
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </template>

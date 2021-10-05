@@ -24,7 +24,7 @@
 
     <div class="banner-content">
       <h1 class="text-uppercase">Descubra o<br />cosmos!</h1>
-      <p class="col-6">
+      <p class="col-7">
         {{ banner.explanation }}
       </p>
     </div>
@@ -48,11 +48,15 @@ export default {
 </script>
 
 <style scoped>
-/* image banner configs */
+.banner-content {
+  position: absolute;
+  top: 4%;
+  left: 80px;
+  z-index: 1000;
+}
 
-/*limitar alty*/
+/* BACKGROUND CONFIGS */
 .background-image {
-
   max-height: 900px;
 }
 
@@ -67,21 +71,13 @@ export default {
   animation: zoom 25s linear infinite;
 }
 
-/* content banner configs */
-
-.banner-content {
-  position: absolute;
-  top: 8rem;
-  left: 3rem;
-  z-index: 1000;
-}
-
+/* TEXT CONFIGS */
 .banner-content h1 {
   width: auto;
-  margin-left: 4rem;
+  padding-top: 80px;
 
   font-family: "Audiowide", cursive;
-  font-size: 8rem;
+  font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 400;
   color: var(--white);
 
@@ -89,45 +85,13 @@ export default {
 }
 
 .banner-content p {
-  margin-top: 10rem;
-  margin-left: 4rem;
-  font-size: 2.6rem;
+  margin-top: calc(24vh - 20px);
+
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
   animation: fade-slide-in 4s;
 }
 
-@media screen and (max-width: 1400px) {
-  .banner-content {
-    top: 7rem;
-  }
+@media screen and (max-width: 900px) {
 
-  .banner-content p {
-    margin-top: 13rem;
-    width: 65%;
-  }
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(1) rotate(0);
-  }
-
-  50% {
-    transform: scale(1.3) rotate(4deg);
-  }
-
-  100% {
-    transform: scale(1) rotate(0);
-  }
-}
-
-@keyframes fade-slide-in {
-  from {
-    opacity: 0;
-    transform: translateX(-300px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 </style>

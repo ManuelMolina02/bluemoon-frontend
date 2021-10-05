@@ -82,12 +82,12 @@
             </div>
 
             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">links úteis</h6>
+              <h6 class="text-uppercase fw-bold mb-4">links</h6>
               <p>
-                <a href="#!" class="text-reset">Sobre</a>
+                <a href="#!" class="text-reset">Home</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Destaque</a>
+                <a href="#!" class="text-reset">Produto</a>
               </p>
               <p>
                 <a href="#!" class="text-reset">Formulário</a>
@@ -96,7 +96,7 @@
 
             <!-- Contact -->
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <h6 class="text-uppercase fw-bold mb-4">Contato</h6>
               <p>Florianópolis, SC, BR</p>
               <p>info@example.com</p>
               <p>(48) 99646-2015</p>
@@ -148,7 +148,12 @@ export default {
   --light-blue: #41b2f1;
   --dark-blue: #2f558c;
   --white: #eeeeeeec;
-  --text-white: #dae8f5
+  --text-white: #dae8f5;
+}
+
+html {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 /* textos e fontes */
@@ -178,11 +183,6 @@ export default {
 
 /* botões */
 
-html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -200,7 +200,7 @@ html {
   background: rgb(61, 61, 61);
 }
 
-/* LOGO ANIMATION */
+/* LOGO CONFIGS */
 
 .logo {
   position: relative;
@@ -212,7 +212,7 @@ html {
   margin: 1.4rem;
 }
 
-/* moon animation orbiting */
+/* moon logo orbiting */
 .moon-image {
   animation: spin 2.6s linear infinite;
 }
@@ -222,20 +222,39 @@ html {
   transition: linear 0.5s;
 }
 
-/* animations */
+/* ANIMATIONS */
+
+/* base spinner */
 @keyframes spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes filter-animation {
+/* background orbital */
+@keyframes zoom {
   0% {
-    filter: hue-rotate(154deg) saturate(2);
+    transform: scale(1) rotate(0);
+  }
+
+  50% {
+    transform: scale(1.3) rotate(4deg);
   }
 
   100% {
-    filter: hue-rotate(0);
+    transform: scale(1) rotate(0);
+  }
+}
+
+/* fade text banner */
+@keyframes fade-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -243,7 +262,6 @@ html {
 
 /*texts*/
 @media screen and (max-width: 1400px) {
-  .banner-content h1,
   .product-content h1,
   .highlights-content h1 {
     font-size: 58px;
@@ -263,6 +281,5 @@ html {
   .product-content span {
     font-size: 1.1rem;
   }
-
 }
 </style>

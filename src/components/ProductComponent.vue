@@ -118,7 +118,7 @@ export default {
   color: #007fe4;
   line-height: 0.88;
   margin-bottom: 0 !important;
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 .product-content span {
@@ -128,6 +128,7 @@ export default {
 
 .product-content p {
   font-size: 28px;
+  width: 80%;
   padding-right: 5rem !important;
 }
 
