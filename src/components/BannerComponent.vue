@@ -115,10 +115,10 @@ export default {
 
 @media screen and (max-width: 480px) {
   .banner-content {
-  left: 40px !important;
+    left: 40px !important;
   }
-  .logo{
-    justify-content: initial;
+  .logo {
+    justify-content: initial !important;
   }
   .banner-content h1 {
     font-size: 42px;
@@ -128,6 +128,19 @@ export default {
 
   .banner-content p {
     width: 90%;
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .banner-content h1 {
+    font-size: 32px;
+    margin-top: 8rem !important;
+    margin-bottom: 6rem !important;
+  }
+
+  .banner-content p {
+    width: 95%;
     font-size: 22px;
   }
 }

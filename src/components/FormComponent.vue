@@ -104,6 +104,5 @@ textarea {
   .form-card {
     width: 90% !important;
   }
-
 }
 </style>

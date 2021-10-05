@@ -176,8 +176,15 @@ export default {
   .div-image img {
     width: 80% !important;
   }
-  .form-container p{
+  .form-container p {
     width: 80% !important;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .title {
+    font-size: 22px;
+    width: 95% !important;
   }
 }
 </style>

@@ -138,7 +138,7 @@ export default {
 
 @media screen and (max-width: 1500px) {
   .product-content,
-  .product-images{
+  .product-images {
     margin: 3rem;
   }
   .product-content p {

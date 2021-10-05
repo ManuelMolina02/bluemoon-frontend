@@ -1,6 +1,6 @@
 <template>
   <div class="highlights-container w-100 d-flex my-5 mx-auto">
-    <div class="highlights-images w-50 ">
+    <div class="highlights-images w-50">
       <img
         class="w-100"
         style="max-width: 678px"
@@ -165,8 +165,8 @@ export default {
     left: -11%;
   }
   .highlights-images div img:hover {
-  top: -160px;
-  left: -25px;
+    top: -160px;
+    left: -25px;
   }
 }
 
