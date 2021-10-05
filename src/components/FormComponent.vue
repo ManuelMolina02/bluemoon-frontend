@@ -47,13 +47,14 @@
         </div>
 
         <div class="w-100 d-flex justify-content-center">
-          <button
+          <a
             type="submit"
+            href="#section-form"
             class="btn btn-primary btn-block btn-lg mb-4"
             style="background-color: #002a68; border: solid 1px #002a68"
           >
             enviar
-          </button>
+          </a>
         </div>
       </form>
     </div>

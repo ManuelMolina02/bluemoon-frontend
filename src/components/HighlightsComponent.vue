@@ -22,13 +22,13 @@
       class="highlights-content text-white p-2 my-5 m-auto"
       style="width: 35%"
     >
-      <h1 style="color: #E4EAF5">Missões em Marte</h1>
+      <h1 style="color: #e4eaf5">Missões em Marte</h1>
       <p style="color: #d2e1ff">
         Siga cada passo dos robôs Perseverance e Curiosity na jornada de
         exploração no planeta vermelho.
       </p>
 
-      <a href="#"><span>saiba mais</span></a>
+      <a href="#section-form"><span>saiba mais</span></a>
     </div>
   </div>
 </template>
