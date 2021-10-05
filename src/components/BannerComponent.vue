@@ -24,7 +24,7 @@
 
     <div class="banner-content">
       <h1 class="my-5 py-5 text-uppercase">Descubra o<br />cosmos!</h1>
-      <p class="my-5 py-4">
+      <p class="my-5 py-4 " style="color: #ede3e4">
         {{ banner.explanation }}
       </p>
     </div>
@@ -40,7 +40,7 @@ export default {
       banner: {
         explanation:
           'A cada dia, uma imagem ou fotografia diferente de nosso fascinante universo é apresentada, junto com uma breve explicação escrita por um astrônomo profissional.',
-        url: 'https://img.wallpapersafari.com/desktop/1920/1080/76/67/HsdRS0.jpg',
+        url: 'https://img.wallpapersafari.com/tablet/2560/1700/29/66/MKlOHz.jpg',
       },
     };
   },
@@ -58,6 +58,7 @@ export default {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-around;
+  filter: drop-shadow(-4px 2px 35px black);
 }
 
 /* BACKGROUND CONFIGS */
@@ -72,6 +73,7 @@ export default {
 
   position: relative;
   top: -100px;
+  /* filter: invert(90%) hue-rotate(170deg) !important; */
 
   animation: zoom 25s linear infinite;
 }
@@ -83,7 +85,7 @@ export default {
   font-family: "Audiowide", cursive;
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 400;
-  color: var(--white);
+  color:#ede3e4;
 
   animation: fade-slide-in 4s;
 }

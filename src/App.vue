@@ -141,7 +141,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #0e0e0e;
+  background-color: #E4EAF5;
 }
 
 :root {
@@ -172,13 +172,13 @@ html {
   font-family: "Raleway", sans-serif;
   letter-spacing: 1.6px;
   font-size: clamp(1.8rem, 2.1vw, 2.3rem);
-  color: var(--text-white);
+  color: var(--dark-blue);
   text-align: initial;
 }
 
 .product-content span {
   font-size: 22px;
-  color: #95a6be;
+  color: #717b8a;
 }
 
 /* botões */
@@ -238,7 +238,7 @@ html {
   }
 
   50% {
-    transform: scale(1.3) rotate(4deg);
+    transform: scale(1.2) rotate(3deg);
   }
 
   100% {

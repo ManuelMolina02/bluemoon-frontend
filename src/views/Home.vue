@@ -15,11 +15,11 @@
     <div
       id="section-gallery"
       class="py-5"
-      style="background: rgba(20, 20, 20, 0.5)"
+      style="background: #182338"
     >
       <div class="w-75 my-5 mx-auto">
         <div>
-          <h1 class="my-5 mx-auto title text-white">
+          <h1 class="my-5 mx-auto title">
             Clique em uma foto e visualize-a junto com uma breve explicação
             escrita por um astrônomo profissional.
           </h1>
@@ -33,7 +33,7 @@
     <div
       id="section-product"
       class="w-100 d-flex mx-auto"
-      style="background: rgba(20, 20, 20, 0.8)"
+      style="background: #d0dcf5"
     >
       <product-component />
     </div>
@@ -42,7 +42,7 @@
     <div
       id="section-highlights"
       class="highlights-container w-100 d-flex mx-auto"
-      style="background: rgba(20, 20, 20, 0.8)"
+      style="background: #1a2845"
     >
       <highlights-component />
     </div>
@@ -102,7 +102,7 @@ export default {
 
 <style scoped>
 .div-image {
-  background-color: #0e0e0e;
+  background-color: #d0dcf5;
   position: relative;
 }
 .title {
@@ -111,8 +111,8 @@ export default {
 
   letter-spacing: 6px;
   font-size: clamp(1.6rem, 2.1vw, 2.3rem);
-  font-weight: 300;
-  color: aliceblue;
+  font-weight: 400 bold;
+  color: #d2e1ff;
   word-break: break-word;
 }
 /* HIGLIGHTS CONTAINER */

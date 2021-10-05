@@ -1,9 +1,6 @@
 <template>
-  <div style="background-color: #0e0e0e" class="my-5 py-5 pb-5">
-    <div
-      class="form-card col-7 mx-auto text-white text-start p-5"
-      style="border: solid 2px white; border-radius: 4px"
-    >
+  <div style="background-color: #e4eaf5" class="my-5 py-5 pb-5">
+    <div class="form-card col-7 mx-auto text-start p-5">
       <form>
         <div class="row mb-4">
           <div class="col">
@@ -50,7 +47,11 @@
         </div>
 
         <div class="w-100 d-flex justify-content-center">
-          <button type="submit" class="btn btn-primary btn-block btn-lg mb-4">
+          <button
+            type="submit"
+            class="btn btn-primary btn-block btn-lg mb-4"
+            style="background-color: #002a68; border: solid 1px #002a68"
+          >
             enviar
           </button>
         </div>
@@ -68,6 +69,15 @@ export default {
 <style scoped>
 .form-control {
   height: 60px !important;
+}
+.form-card {
+  border: solid 2px rgb(26 40 69);
+  color: rgb(26 40 69);
+  border-radius: 4px;
+}
+.form-check-input:checked {
+  background-color: #002a68;
+  border-color: #002a68;
 }
 .form-label {
   margin: 0 !important;

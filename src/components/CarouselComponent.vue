@@ -62,7 +62,7 @@
       hide-header
       button-size="lg"
       size="lg"
-      body-class="text-white bg-dark "
+      body-class="text-white bg-secondary "
       footer-class="text-white bg-dark justify-content-center"
       content-class="bg-dark"
       ok-variant="outline-secondary w-50"
@@ -91,7 +91,7 @@
       hide-header
       button-size="lg"
       size="lg"
-      body-class="text-white bg-dark "
+      body-class="text-white bg-secondary "
       footer-class="text-white bg-dark justify-content-center"
       content-class="bg-dark"
       ok-variant="outline-secondary w-50"
@@ -120,7 +120,7 @@
       hide-header
       button-size="lg"
       size="lg"
-      body-class="text-white bg-dark "
+      body-class="text-white bg-secondary "
       footer-class="text-white bg-dark justify-content-center"
       content-class="bg-dark"
       ok-variant="outline-secondary w-50"
@@ -205,9 +205,9 @@ export default {
 
 .carousel-content {
   filter: grayscale(100%);
+  border: solid 2px #7984ff3d;
   cursor: pointer;
   transition: ease-in-out 1s;
-  border: solid 2px #333333;
 }
 
 .carousel-content:hover {
