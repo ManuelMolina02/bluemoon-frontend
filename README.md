@@ -30,7 +30,7 @@ Para instalar
 npm install
 ```
 
-Para subir um servidor local
+Para subir um servidor local (acesso offline)
 ```
 npm run serve
 ```
