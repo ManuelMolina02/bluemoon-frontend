@@ -1,6 +1,6 @@
 <template>
   <div class="highlights-container w-100 d-flex my-5 mx-auto">
-    <div class="highlights-images w-50 my-5">
+    <div class="highlights-images w-50 ">
       <img
         class="w-100"
         style="max-width: 678px"
@@ -58,6 +58,7 @@ export default {
 /* HIGLIGHTS CONTAINER */
 .highlights-container {
   max-width: 75% !important;
+  align-items: center;
 }
 
 .highlights-content {
@@ -140,6 +141,32 @@ export default {
 }
 
 @media screen and (max-width: 1400px) {
+  .highlights-content,
+  .highlights-images {
+    width: 75% !important;
+  }
 
+  .highlights-content a {
+    width: 323px;
+    height: 85px;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .highlights-container {
+    display: flex !important;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .highlights-images > img {
+    top: 15%;
+    left: -11%;
+  }
+  .highlights-images div img:hover {
+    top: -16%;
+    left: -1.2%;
+  }
 }
 </style>
