@@ -41,5 +41,4 @@ npm run build
 ```
 
 
-Feito com 💜 por Manuel Molina 
-Me contate através do [LinkedIn!](https://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/)
+Feito com 💜 por Manuel Molina | me contate através do [LinkedIn!](https://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/)
