@@ -23,8 +23,8 @@
     </div>
 
     <div class="banner-content">
-      <h1 class="text-uppercase">Descubra o<br />cosmos!</h1>
-      <p>
+      <h1 class="my-5 py-5 text-uppercase">Descubra o<br />cosmos!</h1>
+      <p class="my-5 py-4">
         {{ banner.explanation }}
       </p>
     </div>
@@ -53,6 +53,11 @@ export default {
   top: 4%;
   left: 80px;
   z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
 }
 
 /* BACKGROUND CONFIGS */
@@ -74,7 +79,6 @@ export default {
 /* TEXT CONFIGS */
 .banner-content h1 {
   width: auto;
-  padding-top: 80px;
 
   font-family: "Audiowide", cursive;
   font-size: clamp(4rem, 8vw, 8rem);
@@ -86,13 +90,28 @@ export default {
 
 .banner-content p {
   width: 50%;
-  margin-top: 10%;
 
-  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+  font-size: clamp(1.8rem, 2.1vw, 2.3rem);
   animation: fade-slide-in 4s;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1440px) {
+    .banner-content h1 {
+    margin-bottom: 4rem !important;
+  }
+  .banner-content p {
+    width: 65%;
+    padding-top: 7rem !important;
+  }
+}
 
+@media screen and (max-width: 825px) {
+    .banner-content h1 {
+    margin-bottom: 4rem !important;
+  }
+  .banner-content p {
+    width: 75%;
+    padding-top: 10rem !important;
+  }
 }
 </style>
