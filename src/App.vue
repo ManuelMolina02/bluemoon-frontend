@@ -160,7 +160,7 @@ html {
 .banner-content h1,
 .product-content h1,
 .highlights-content h1 {
-  font-size: 4.8rem;
+  font-size: clamp(3rem, 3.6vw, 4.8rem);
   font-weight: bold;
   text-align: initial;
 }
@@ -171,7 +171,7 @@ html {
 .form-container p {
   font-family: "Raleway", sans-serif;
   letter-spacing: 1.6px;
-  font-size: 32px;
+  font-size: clamp(1.8rem, 2.1vw, 2.3rem);
   color: var(--text-white);
   text-align: initial;
 }
@@ -255,31 +255,6 @@ html {
   to {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-
-/* RESPONSIVE */
-
-/*texts*/
-@media screen and (max-width: 1400px) {
-  .product-content h1,
-  .highlights-content h1 {
-    font-size: 58px;
-  }
-
-  .banner-content p,
-  .product-content p,
-  .highlights-content p,
-  .form-container p {
-    font-family: "Raleway", sans-serif;
-    letter-spacing: 1.6px;
-    font-size: 1.6rem;
-    color: aliceblue;
-    text-align: initial;
-  }
-
-  .product-content span {
-    font-size: 1.1rem;
   }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div class="product-container w-100 d-flex my-5 mx-auto">
-    <div class="product-images w-50 m-5 pb-5">
+    <div class="product-images w-50 my-5 pb-5">
       <img
         class="w-100"
         style="max-width: 568px"
@@ -9,7 +9,7 @@
       />
     </div>
 
-    <div class="product-content text-white m-5" style="width: 45%">
+    <div class="product-content text-white my-5" style="width: 45%">
       <div class="product-item pb-2">
         <div class="w-75 d-flex">
           <h1>+10.000</h1>
@@ -98,9 +98,6 @@ export default {
 
 <style scoped>
 /* HIGLIGHTS CONTAINER */
-.product-container {
-  max-width: 75% !important;
-}
 
 .product-content {
   display: flex;
@@ -127,20 +124,55 @@ export default {
 }
 
 .product-content p {
-  font-size: 28px;
-  width: 80%;
-  padding-right: 5rem !important;
+  width: 65%;
 }
 
 .product-images img {
   position: sticky !important;
   border-radius: 8px;
   top: 32px;
+  margin-bottom: 1rem !important;
+
+  justify-content: center;
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1500px) {
+  .product-content,
+  .product-images{
+    margin: 3rem;
+  }
+  .product-content p {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product-content div {
+    flex-direction: column;
+    align-items: initial;
+  }
+
+  .product-content p {
+    width: 100%;
+    font-size: 1.3rem;
+  }
+
+  .product-content span {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .product-container {
+    justify-content: center;
+  }
+
   .product-content {
-    width: 50% !important;
+    width: 80% !important;
+  }
+
+  .product-images {
+    display: none;
   }
 }
 </style>

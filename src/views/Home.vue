@@ -12,7 +12,6 @@
         class="my-5 py-5 col-6"
         src="../assets/img-div.svg"
         alt=""
-        style="background-color: #0e0e0e"
       />
     </div>
 
@@ -115,7 +114,7 @@ export default {
   font-family: "Oxygen", sans-serif;
 
   letter-spacing: 6px;
-  font-size: 2.6rem;
+  font-size: clamp(1.6rem, 2.1vw, 2.3rem);
   font-weight: 300;
   color: aliceblue;
   word-break: break-word;
@@ -170,5 +169,16 @@ export default {
 
 .highlights-content a:hover:after {
   height: 100%;
+}
+
+@media screen and (max-width: 775px) {
+  .title {
+    width: 75%;
+    letter-spacing: 3px;
+  }
+
+  .div-image img{
+    width: 80% !important;
+  }
 }
 </style>

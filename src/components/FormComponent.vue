@@ -1,20 +1,20 @@
 <template>
   <div style="background-color: #0e0e0e" class="my-5 py-5 pb-5">
-    <!-- form card -->
     <div
-      class="w-50 mx-auto text-white text-start p-5"
+      class="form-card col-7 mx-auto text-white text-start p-5"
       style="border: solid 2px white; border-radius: 4px"
     >
       <form>
         <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
-              <label class="form-label" for="form6Example1">Nome</label>
-              <input type="text" class="form-control" />
+              <label class="form-label ">Nome</label>
+              <input type="text" class="form-control name-input" />
             </div>
           </div>
+
           <div class="col">
-            <div class="form-outline">
+            <div class="form-outline ">
               <label class="form-label">Sobrenome</label>
               <input type="text" class="form-control" />
             </div>
@@ -66,7 +66,43 @@ export default {
 </script>
 
 <style scoped>
+.form-control{
+  height: 60px !important;
+}
+.form-label {
+  margin: 0 !important;
+}
 textarea {
   max-height: 160px;
+}
+
+@media screen and (max-width: 1440px) {
+  .form-card {
+    width: 75% !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .form-card form div {
+    display: flex ;
+    flex-direction: column;
+  }
+
+  .name-input {
+    margin-bottom: 1.3rem !important;
+  }
+
+  .form-check{
+    flex-direction: row !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-control{
+  height: 80px !important;
+}
+  .form-card {
+    width: 90% !important;
+  }
 }
 </style>

@@ -90,8 +90,6 @@ export default {
 
 .banner-content p {
   width: 50%;
-
-  font-size: clamp(1.8rem, 2.1vw, 2.3rem);
   animation: fade-slide-in 4s;
 }
 
