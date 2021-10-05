@@ -15,7 +15,7 @@
 - *Axios*
 
 
-## 🤔 Como instalar o projeto localmente?
+## 🤔 Como instalar o projeto?
 
 
 - Faça um clone desse repositório;
