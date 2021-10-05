@@ -24,7 +24,7 @@
 
     <div class="banner-content">
       <h1 class="text-uppercase">Descubra o<br />cosmos!</h1>
-      <p class="col-7">
+      <p>
         {{ banner.explanation }}
       </p>
     </div>
@@ -85,9 +85,10 @@ export default {
 }
 
 .banner-content p {
-  margin-top: calc(24vh - 20px);
+  width: 50%;
+  margin-top: 10%;
 
-  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-size: clamp(1.8rem, 2.8vw, 2.4rem);
   animation: fade-slide-in 4s;
 }
 
