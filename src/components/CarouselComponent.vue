@@ -62,23 +62,20 @@
       hide-header
       button-size="lg"
       size="lg"
-      title="Primary Content"
-      header-class="text-white bg-dark"
       body-class="text-white bg-dark "
       footer-class="text-white bg-dark justify-content-center"
       content-class="bg-dark"
       ok-variant="outline-secondary w-50"
       ok-title="Close"
+      :modal-class="(maxHeight = 80 % !important)"
     >
-      <div class="mb-4" v-for="mission in missionsOne" :key="mission.missionsOne">
-        <b-card
-          class="my-3 text-white bg-dark"
-          :img-src="mission.url"
-          img-top
-          img-alt="Card image"
-          img-width="700px"
-        >
-          <b-card-text>
+      <div
+        class="mb-4"
+        v-for="mission in missionsOne"
+        :key="mission.missionsOne"
+      >
+        <b-card class="my-3 text-white bg-dark" :img-src="mission.url" img-top>
+          <b-card-text class="card-text">
             <h3>{{ mission.title }}</h3>
             <p>{{ mission.explanation }}</p>
           </b-card-text>
@@ -86,7 +83,7 @@
       </div>
     </b-modal>
 
-      <b-modal
+    <b-modal
       id="secondPublication"
       centered
       scrollable
@@ -94,23 +91,20 @@
       hide-header
       button-size="lg"
       size="lg"
-      title="Primary Content"
-      header-class="text-white bg-dark"
       body-class="text-white bg-dark "
       footer-class="text-white bg-dark justify-content-center"
       content-class="bg-dark"
       ok-variant="outline-secondary w-50"
       ok-title="Close"
+      :modal-class="(maxHeight = 80 % !important)"
     >
-      <div class="mb-4" v-for="mission in missionsTwo" :key="mission.missionsTwo">
-        <b-card
-          class="my-3 text-white bg-dark"
-          :img-src="mission.url"
-          img-top
-          img-alt="Card image"
-          img-width="700px"
-        >
-          <b-card-text>
+      <div
+        class="mb-4"
+        v-for="mission in missionsTwo"
+        :key="mission.missionsTwo"
+      >
+        <b-card class="my-3 text-white bg-dark" :img-src="mission.url" img-top>
+          <b-card-text class="card-text">
             <h3>{{ mission.title }}</h3>
             <p>{{ mission.explanation }}</p>
           </b-card-text>
@@ -118,7 +112,7 @@
       </div>
     </b-modal>
 
-      <b-modal
+    <b-modal
       id="thirdPublication"
       centered
       scrollable
@@ -126,26 +120,23 @@
       hide-header
       button-size="lg"
       size="lg"
-      title="Primary Content"
-      header-class="text-white bg-dark"
       body-class="text-white bg-dark "
       footer-class="text-white bg-dark justify-content-center"
       content-class="bg-dark"
       ok-variant="outline-secondary w-50"
       ok-title="Close"
+      :modal-class="(maxHeight = 80 % !important)"
     >
-      <div class="mb-4" v-for="mission in missionsTree" :key="mission.missionsTree">
-        <b-card
-          class="my-3 text-white bg-dark"
-          :img-src="mission.url"
-          img-top
-          img-alt="Card image"
-          img-width="700px"
-        >
-          <b-card-text>
+      <div
+        class="mb-4"
+        v-for="mission in missionsTree"
+        :key="mission.missionsTree"
+      >
+        <b-card class="my-3 text-white bg-dark" :img-src="mission.url" img-top>
+          <div class="card-text">
             <h3>{{ mission.title }}</h3>
             <p>{{ mission.explanation }}</p>
-          </b-card-text>
+          </div>
         </b-card>
       </div>
     </b-modal>
@@ -239,6 +230,14 @@ export default {
   border: 1px solid rgb(0 0 0 / 25%);
   border-top-left-radius: calc(1.25rem - -1px);
   border-top-right-radius: calc(1.25rem - 1px);
+  background-color: rgba(0, 0, 0, 0.301) !important;
+}
+
+.card-text {
+  position: relative;
+  width: 96%;
+  margin: 0 auto;
+  padding: 16px;
 }
 
 .card-img,
@@ -247,8 +246,12 @@ export default {
   border-top-right-radius: calc(1.25rem - 1px);
 
   width: 100%;
-  height: 368px;
+  height: 548px;
 
   background-size: cover;
+}
+
+#thirdMissions > div {
+  max-height: 100%;
 }
 </style>
