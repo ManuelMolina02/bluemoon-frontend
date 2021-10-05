@@ -8,13 +8,13 @@
         <div class="row mb-4">
           <div class="col">
             <div class="form-outline">
-              <label class="form-label ">Nome</label>
+              <label class="form-label">Nome</label>
               <input type="text" class="form-control name-input" />
             </div>
           </div>
 
           <div class="col">
-            <div class="form-outline ">
+            <div class="form-outline">
               <label class="form-label">Sobrenome</label>
               <input type="text" class="form-control" />
             </div>
@@ -66,7 +66,7 @@ export default {
 </script>
 
 <style scoped>
-.form-control{
+.form-control {
   height: 60px !important;
 }
 .form-label {
@@ -84,7 +84,7 @@ textarea {
 
 @media screen and (max-width: 900px) {
   .form-card form div {
-    display: flex ;
+    display: flex;
     flex-direction: column;
   }
 
@@ -92,17 +92,18 @@ textarea {
     margin-bottom: 1.3rem !important;
   }
 
-  .form-check{
+  .form-check {
     flex-direction: row !important;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .form-control{
-  height: 80px !important;
-}
+  .form-control {
+    height: 80px !important;
+  }
   .form-card {
     width: 90% !important;
   }
+
 }
 </style>

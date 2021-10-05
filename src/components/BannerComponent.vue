@@ -94,7 +94,7 @@ export default {
 }
 
 @media screen and (max-width: 1440px) {
-    .banner-content h1 {
+  .banner-content h1 {
     margin-bottom: 4rem !important;
   }
   .banner-content p {
@@ -104,12 +104,31 @@ export default {
 }
 
 @media screen and (max-width: 825px) {
-    .banner-content h1 {
+  .banner-content h1 {
     margin-bottom: 4rem !important;
   }
   .banner-content p {
     width: 75%;
     padding-top: 10rem !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .banner-content {
+  left: 40px !important;
+  }
+  .logo{
+    justify-content: initial;
+  }
+  .banner-content h1 {
+    font-size: 42px;
+    margin-top: 6rem !important;
+    margin-bottom: 8rem !important;
+  }
+
+  .banner-content p {
+    width: 90%;
+    font-size: 22px;
   }
 }
 </style>

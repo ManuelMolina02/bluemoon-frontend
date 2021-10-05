@@ -8,11 +8,7 @@
 
     <!-- div image -->
     <div class="div-image">
-      <img
-        class="my-5 py-5 col-6"
-        src="../assets/img-div.svg"
-        alt=""
-      />
+      <img class="my-5 py-5 col-6" src="../assets/img-div.svg" alt="" />
     </div>
 
     <!-- CAROUSEL CONTAINER -->
@@ -177,7 +173,10 @@ export default {
     letter-spacing: 3px;
   }
 
-  .div-image img{
+  .div-image img {
+    width: 80% !important;
+  }
+  .form-container p{
     width: 80% !important;
   }
 }

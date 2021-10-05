@@ -165,8 +165,16 @@ export default {
     left: -11%;
   }
   .highlights-images div img:hover {
-    top: -16%;
-    left: -1.2%;
+  top: -160px;
+  left: -25px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .highlights-content,
+  .highlights-images {
+    width: 90% !important;
+    margin-left: 4rem;
   }
 }
 </style>

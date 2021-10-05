@@ -1,7 +1,7 @@
 <template>
   <div class="carousel-container d-flex my-5 py-5">
     <b-carousel
-            v-b-modal.primaryPublication
+      v-b-modal.primaryPublication
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
@@ -11,7 +11,7 @@
       <div
         role="listitem"
         class="carousel-item"
-        v-for="mission in missions"
+        v-for="mission in missionsOne"
         :key="mission.title"
       >
         <img :src="mission.url" class="carousel-img" />
@@ -19,7 +19,7 @@
     </b-carousel>
 
     <b-carousel
-            v-b-modal.primaryPublication
+      v-b-modal.secondPublication
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
@@ -29,7 +29,7 @@
       <div
         role="listitem"
         class="carousel-item"
-        v-for="mission in missions"
+        v-for="mission in missionsTwo"
         :key="mission.title"
       >
         <img :src="mission.url" class="carousel-img" />
@@ -37,7 +37,7 @@
     </b-carousel>
 
     <b-carousel
-      v-b-modal.primaryPublication
+      v-b-modal.thirdPublication
       class="carousel-content"
       style="text-shadow: 0px 0px 2px #000"
       fade
@@ -47,10 +47,10 @@
       <div
         role="listitem"
         class="carousel-item"
-        v-for="data in datas"
-        :key="data.title"
+        v-for="mission in missionsTree"
+        :key="mission.title"
       >
-        <img :src="data.url" class="carousel-img" />
+        <img :src="mission.url" class="carousel-img" />
       </div>
     </b-carousel>
 
@@ -70,17 +70,81 @@
       ok-variant="outline-secondary w-50"
       ok-title="Close"
     >
-      <div class="mb-4" v-for="data in datas" :key="data.title">
+      <div class="mb-4" v-for="mission in missionsOne" :key="mission.missionsOne">
         <b-card
           class="my-3 text-white bg-dark"
-          :img-src="data.url"
+          :img-src="mission.url"
           img-top
           img-alt="Card image"
           img-width="700px"
         >
           <b-card-text>
-            <h3>{{ data.title }}</h3>
-            <p>{{ data.explanation }}</p>
+            <h3>{{ mission.title }}</h3>
+            <p>{{ mission.explanation }}</p>
+          </b-card-text>
+        </b-card>
+      </div>
+    </b-modal>
+
+      <b-modal
+      id="secondPublication"
+      centered
+      scrollable
+      ok-only
+      hide-header
+      button-size="lg"
+      size="lg"
+      title="Primary Content"
+      header-class="text-white bg-dark"
+      body-class="text-white bg-dark "
+      footer-class="text-white bg-dark justify-content-center"
+      content-class="bg-dark"
+      ok-variant="outline-secondary w-50"
+      ok-title="Close"
+    >
+      <div class="mb-4" v-for="mission in missionsTwo" :key="mission.missionsTwo">
+        <b-card
+          class="my-3 text-white bg-dark"
+          :img-src="mission.url"
+          img-top
+          img-alt="Card image"
+          img-width="700px"
+        >
+          <b-card-text>
+            <h3>{{ mission.title }}</h3>
+            <p>{{ mission.explanation }}</p>
+          </b-card-text>
+        </b-card>
+      </div>
+    </b-modal>
+
+      <b-modal
+      id="thirdPublication"
+      centered
+      scrollable
+      ok-only
+      hide-header
+      button-size="lg"
+      size="lg"
+      title="Primary Content"
+      header-class="text-white bg-dark"
+      body-class="text-white bg-dark "
+      footer-class="text-white bg-dark justify-content-center"
+      content-class="bg-dark"
+      ok-variant="outline-secondary w-50"
+      ok-title="Close"
+    >
+      <div class="mb-4" v-for="mission in missionsTree" :key="mission.missionsTree">
+        <b-card
+          class="my-3 text-white bg-dark"
+          :img-src="mission.url"
+          img-top
+          img-alt="Card image"
+          img-width="700px"
+        >
+          <b-card-text>
+            <h3>{{ mission.title }}</h3>
+            <p>{{ mission.explanation }}</p>
           </b-card-text>
         </b-card>
       </div>
@@ -89,8 +153,6 @@
 </template>
 
 <script>
-import dataFake from '../../data-fake.json';
-
 const axios = require('axios').default;
 
 export default {
@@ -98,19 +160,42 @@ export default {
 
   data() {
     return {
-      missions: {},
-      datas: dataFake,
+      missionsOne: {},
+      missionsTwo: {},
+      missionsTree: {},
     };
   },
 
   async created() {
     await axios
       .get(
-        'https://api.nasa.gov/planetary/apod?start_date=2021-09-12&end_date=2021-09-16&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
+        'https://api.nasa.gov/planetary/apod?start_date=2021-08-10&end_date=2021-08-14&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
       )
       .then((response) => {
-        this.missions = response.data;
-        console.log(this.missions);
+        this.missionsOne = response.data;
+        console.log(this.missionsOne);
+      });
+    await axios
+      .get(
+        'https://api.nasa.gov/planetary/apod?start_date=2021-08-17&end_date=2021-08-20&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
+      )
+
+      .then((response) => {
+        this.missionsTwo = response.data;
+        console.log(this.missionsTwo);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+
+    await axios
+      .get(
+        'https://api.nasa.gov/planetary/apod?start_date=2021-08-26&end_date=2021-08-31&api_key=AOx0gbuEF9RXCpkQBkYq0eGDEkGCSYdhOpUT6Y4K',
+      )
+
+      .then((response) => {
+        this.missionsTree = response.data;
+        console.log(this.missionsTree);
       })
       .catch((error) => {
         console.error(error);
@@ -132,7 +217,6 @@ export default {
   cursor: pointer;
   transition: ease-in-out 1s;
   border: solid 2px #333333;
-
 }
 
 .carousel-content:hover {
@@ -167,5 +251,4 @@ export default {
 
   background-size: cover;
 }
-
 </style>
