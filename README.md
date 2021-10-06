@@ -14,6 +14,11 @@
 - *Bootstrap Vue*
 - *Axios*
 
+## 🤔 Como visualizar o projeto?
+
+
+Basta clicar neste [link!](https://bluemoon-frontend.vercel.app/#/)
+
 
 ## 🤔 Como instalar o projeto?
 
