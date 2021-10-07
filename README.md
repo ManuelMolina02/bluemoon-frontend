@@ -14,14 +14,14 @@
 - *Bootstrap Vue*
 - *Axios*
 
-## 🤔 Como visualizar o projeto?
-
-
-Basta clicar neste [link!](https://bluemoon-frontend.vercel.app/#/)
-
 
 ## 🤔 Como instalar o projeto?
 
+### Se deseja apenas conhecer o projeto visualmente:
+
+ - Basta clicar neste [link!](https://bluemoon-frontend.vercel.app/#/)
+
+### Se quer instalar localmente em sua máquina:
 
 - Faça um clone desse repositório;
 - Acesse o local desejado através do terminal e digite: 
@@ -38,6 +38,10 @@ npm install
 Para subir um servidor local (acesso offline)
 ```
 npm run serve
+```
+Ou
+```
+npm start
 ```
 
 Compilar para produção
