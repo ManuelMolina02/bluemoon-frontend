@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Quantico:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap");
+
+
+#app {
+  font-family: "Orbitron", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  background-color: #e4eaf5;
+}
+
+
+:root {
+
+  --light-blue: #41b2f1;
+  --dark-blue: #2f558c;
+  --white: #eeeeeeec;
+  --text-white: #dae8f5;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+/* textos e fontes */
+.banner-content h1,
+.product-content h1,
+.highlights-content h1 {
+  font-size: clamp(3rem, 3.6vw, 4.8rem);
+  font-weight: bold;
+
+}
+
+.banner-content p,
+.product-content p,
+.highlights-content p,
+.form-container p {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1.6px;
+  font-size: clamp(1.8rem, 2.1vw, 2.3rem);
+  color: var(--dark-blue);
+  text-align: initial;
+}
+
+.product-content span {
+  font-size: 22px;
+  color: #717b8a;
+}
+
+/* botões */
+
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #bdbdbd;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(90, 90, 90);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(61, 61, 61);
+}
+
+/* animations */
+
+@keyframes zoom {
+    0% {
+      transform: rotate(0) scale(1);
+    }
+    50% {
+      transform: rotate(4deg) scale(1.1);
+    }
+    100% {
+      transform: rotate(0) scale(1);
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

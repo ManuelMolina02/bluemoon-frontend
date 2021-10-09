@@ -1,14 +1,12 @@
 <template>
   <div id="app">
+    <base-spinner/>
     <side-bar />
 
     <router-view />
 
     <!-- Footer -->
-    <footer
-      id="section-footer"
-      class="text-center text-lg-start bg-light text-muted"
-    >
+    <footer id="footer" class="text-center text-lg-start bg-light text-muted">
       <!-- cabeçalho do footer -->
       <div
         class="
@@ -117,94 +115,31 @@
 
 <script>
 import SideBar from '@/components/SideBar.vue';
-/*
-import BaseSpinner from '@/components/global/BaseSpinner.vue';
-*/
+import BaseSpinner from '@/components/BaseSpinner.vue';
 
 export default {
   name: 'Home',
 
   components: {
     SideBar,
-    /* BaseSpinner */
+    BaseSpinner,
   },
+
+  mounted() {
+    setTimeout(() => {
+      this.$root.$emit('Spinner::hide');
+    }, 3000);
+  },
+
 };
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Audiowide&family=Comfortaa:wght@400;500;700&family=Orbitron:wght@400;500;700;900&family=Quantico:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;300;400&display=swap");
-#app {
-  font-family: "Orbitron", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: #E4EAF5;
-}
-
-:root {
-  --light-blue: #41b2f1;
-  --dark-blue: #2f558c;
-  --white: #eeeeeeec;
-  --text-white: #dae8f5;
-}
-
-html {
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* textos e fontes */
-.banner-content h1,
-.product-content h1,
-.highlights-content h1 {
-  font-size: clamp(3rem, 3.6vw, 4.8rem);
-  font-weight: bold;
-  text-align: initial;
-}
-
-.banner-content p,
-.product-content p,
-.highlights-content p,
-.form-container p {
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 1.6px;
-  font-size: clamp(1.8rem, 2.1vw, 2.3rem);
-  color: var(--dark-blue);
-  text-align: initial;
-}
-
-.product-content span {
-  font-size: 22px;
-  color: #717b8a;
-}
-
-/* botões */
-
-/* scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #bdbdbd;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(90, 90, 90);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgb(61, 61, 61);
-}
-
 /* LOGO CONFIGS */
 
 .logo {
   position: relative;
-  z-index: 100;
+  z-index: 3;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -214,7 +149,7 @@ html {
 
 /* moon logo orbiting */
 .moon-image {
-  animation: spin 2.6s linear infinite;
+  animation: spin 3s linear infinite;
 }
 
 .icon-contact:hover {

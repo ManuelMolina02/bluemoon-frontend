@@ -1,12 +1,12 @@
 <template>
-  <div class="banner-container">
+  <div id="banner">
     <div class="logo">
       <!-- moon orbiting -->
       <img
         class="moon-image"
         src="../assets/frame.svg"
         style="width: 46px; opacity: 0.91"
-        alt=""
+        alt="image-logo"
       />
 
       <!-- text logo -->
@@ -14,18 +14,25 @@
         class="mx-2"
         src="../assets/bluemoon.svg"
         style="width: 232px; opacity: 0.91"
-        alt=""
+        alt="text-logo"
       />
     </div>
 
-    <div class="background-image">
-      <img :src="banner.url" />
+    <div class="banner-container">
+      <div class="background-image">
+        <img
+          src="https://img.wallpapersafari.com/tablet/2560/1700/29/66/MKlOHz.jpg"
+          alt="banner-background"
+        />
+      </div>
     </div>
 
-    <div class="banner-content">
-      <h1 class="my-5 py-5 text-uppercase">Descubra o<br />cosmos!</h1>
-      <p class="my-5 py-4 " style="color: #ede3e4">
-        {{ banner.explanation }}
+    <div class="banner-content" alt="conteúdo banner home">
+      <h1>DESCUBRA O <br />COSMOS!</h1>
+      <p class="text-white">
+        A cada dia, uma imagem ou fotografia diferente de nosso fascinante
+        universo é apresentada, junto com uma breve explicação escrita por um
+        astrônomo profissional.
       </p>
     </div>
   </div>
@@ -33,114 +40,120 @@
 
 <script>
 export default {
-  name: 'BannerComponent',
-
-  data() {
-    return {
-      banner: {
-        explanation:
-          'A cada dia, uma imagem ou fotografia diferente de nosso fascinante universo é apresentada, junto com uma breve explicação escrita por um astrônomo profissional.',
-        url: 'https://img.wallpapersafari.com/tablet/2560/1700/29/66/MKlOHz.jpg',
-      },
-    };
-  },
+  name: 'Banner',
 };
 </script>
 
 <style scoped>
-.banner-content {
+/* LOGO CONFIGS */
+.logo {
   position: absolute;
-  top: 4%;
-  left: 80px;
-  z-index: 1000;
-
+  z-index: 3;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  filter: drop-shadow(-4px 2px 35px black);
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  margin: 1.8rem;
+}
+.moon-image {
+  margin-right: 0.4rem;
+  animation: spin 2.6s linear infinite;
 }
 
-/* BACKGROUND CONFIGS */
-.background-image {
-  max-height: 900px;
+/* BANNER IMAGE */
+.banner-container {
+  overflow: hidden;
+  max-height: 940px;
 }
 
 .background-image img {
   width: 100%;
-  height: 1060px;
+  height: 1240px;
   object-fit: cover;
+  filter: contrast(1.02) brightness(0.95);
 
   position: relative;
-  top: -100px;
-  /* filter: invert(90%) hue-rotate(170deg) !important; */
+  top: -4vh;
 
   animation: zoom 25s linear infinite;
 }
 
-/* TEXT CONFIGS */
-.banner-content h1 {
-  width: auto;
+/* BANNER CONTENT */
+.banner-content {
+  filter: drop-shadow(18px 10px 0.8rem #000);
 
+  margin: 8rem 4.2rem;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  text-align: start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner-content h1 {
   font-family: "Audiowide", cursive;
   font-size: clamp(4rem, 8vw, 8rem);
   font-weight: 400;
-  color:#ede3e4;
-
-  animation: fade-slide-in 4s;
+  color: #ede3e4;
 }
 
 .banner-content p {
   width: 50%;
-  animation: fade-slide-in 4s;
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1.6px;
+  font-size: clamp(1.8rem, 2.1vw, 2.3rem);
+  color: var(--dark-blue);
+  text-align: initial;
 }
 
 @media screen and (max-width: 1440px) {
-  .banner-content h1 {
-    margin-bottom: 4rem !important;
-  }
   .banner-content p {
     width: 65%;
-    padding-top: 7rem !important;
   }
 }
-
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 875px) {
+    .logo {
+    margin-top: 2.4rem;
+    justify-content: initial !important;
+  }
+  .banner-content {
+    margin: 8rem 1rem;
+  }
   .banner-content h1 {
-    margin-bottom: 4rem !important;
+    width: 100%;
+    text-align: center !important;
   }
   .banner-content p {
-    width: 75%;
-    padding-top: 10rem !important;
+    width: 90%;
+    font-size: 26px;
+  }
+  .background-image img {
+    width: 100%;
+    height: 112vh;
+
+    animation: none;
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 540px) {
   .banner-content {
     left: 40px !important;
   }
-  .logo {
-    justify-content: initial !important;
-  }
-  .banner-content h1 {
-    font-size: 42px;
-    margin-top: 6rem !important;
-    margin-bottom: 8rem !important;
-  }
 
+  .banner-content h1 {
+    font-size: 46px;
+  }
   .banner-content p {
-    width: 90%;
     font-size: 22px;
   }
 }
-
 @media screen and (max-width: 320px) {
   .banner-content h1 {
     font-size: 32px;
-    margin-top: 8rem !important;
-    margin-bottom: 6rem !important;
   }
-
   .banner-content p {
     width: 95%;
     font-size: 22px;

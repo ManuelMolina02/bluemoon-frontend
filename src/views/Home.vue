@@ -3,8 +3,9 @@
     <!--  CONTAINER -->
 
     <!-- card de apresentação -->
-
-    <banner-component id="section-home" />
+    <div id="home">
+      <banner-component />
+    </div>
 
     <!-- div image -->
     <div class="div-image">
@@ -12,11 +13,7 @@
     </div>
 
     <!-- CAROUSEL CONTAINER -->
-    <div
-      id="section-gallery"
-      class="py-5"
-      style="background: #182338"
-    >
+    <div id="gallery" class="py-5" style="background: #182338">
       <div class="w-75 my-5 mx-auto">
         <div>
           <h1 class="my-5 mx-auto title">
@@ -31,7 +28,7 @@
 
     <!-- PRODUCT CONTAINER-->
     <div
-      id="section-product"
+      id="product"
       class="w-100 d-flex mx-auto"
       style="background: #d0dcf5"
     >
@@ -40,7 +37,7 @@
 
     <!-- HIGHLIGHTS CONTAINER-->
     <div
-      id="section-highlights"
+      id="highlights"
       class="highlights-container w-100 d-flex mx-auto"
       style="background: #1a2845"
     >
@@ -49,7 +46,7 @@
 
     <!-- FORM CONTAINER-->
 
-    <div id="section-form" class="form-container py-5 my-5">
+    <div id="form" class="form-container py-5 my-5">
       <p class="w-50 mx-auto text-center">
         Realize agora o seu cadastro para receber mais informações sobre como
         ficar por dentro das últimas notícias do mundo intergaláctico!
@@ -66,28 +63,12 @@ import FormComponent from '@/components/FormComponent.vue';
 import HighlightsComponent from '@/components/HighlightsComponent.vue';
 import ProductComponent from '@/components/ProductComponent.vue';
 
-const axios = require('axios').default;
-
 export default {
   name: 'Home',
   data() {
     return {
       missions: {},
     };
-  },
-
-  async created() {
-    await axios
-      .get(
-        'https://api.nasa.gov/planetary/apod?start_date=2021-09-23&end_date=2021-09-26&api_key=KMSpsJ0it2ktgbhjR8OdJbjr3WANnaQIohtcM424',
-      )
-      .then((response) => {
-        this.missions = response.data;
-        console.log(this.missions);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
   },
 
   components: {

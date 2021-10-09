@@ -1,10 +1,12 @@
 <template>
+
   <div class="product-container w-100 d-flex my-5 mx-auto">
+  <div id="gohere"></div>
     <div class="product-images w-50 my-5 pb-5">
       <img
         class="w-100"
         style="max-width: 568px"
-        alt="Banner image"
+        alt="product-image"
         :src="missions.url"
       />
     </div>
@@ -116,6 +118,7 @@ export default {
   line-height: 0.88;
   margin-bottom: 0 !important;
   padding-right: 0.5rem;
+  text-align: initial;
 }
 
 .product-content span {
