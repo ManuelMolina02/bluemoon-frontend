@@ -44,6 +44,7 @@
       <highlights-component />
     </div>
 
+<<<<<<< Updated upstream
     <!-- FORM CONTAINER-->
 
     <div id="form" class="form-container py-5 my-5">
@@ -53,6 +54,9 @@
       </p>
       <form-component />
     </div>
+=======
+    <form-component />
+>>>>>>> Stashed changes
   </div>
 </template>
 
