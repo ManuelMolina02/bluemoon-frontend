@@ -1,5 +1,4 @@
 <template>
-<<<<<<< Updated upstream:src/components/HighlightsComponent.vue
   <div class="highlights-container w-100 d-flex my-5 mx-auto">
     <div class="highlights-images w-50">
       <img
@@ -10,43 +9,15 @@
       />
 
       <div>
-=======
-  <div>
-    <div class="highlights-container w-100 d-flex my-5 mx-auto">
-      <div class="highlights-images w-50 my-5">
->>>>>>> Stashed changes:src/components/CardsHighlightsComponent.vue
         <img
           class="w-100"
           style="max-width: 678px"
           alt="Banner image"
           :src="missions.url"
         />
-
-        <div>
-          <img
-            class="w-100"
-            style="max-width: 678px"
-            alt="Banner image"
-            :src="missions.url"
-          />
-        </div>
-      </div>
-
-      <div
-        class="highlights-content text-white p-2 my-5 m-auto"
-        style="width: 35%"
-      >
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
-        </p>
-
-        <a class="text-white" href="#"><span>lear more</span></a>
       </div>
     </div>
 
-<<<<<<< Updated upstream:src/components/HighlightsComponent.vue
     <div
       class="highlights-content text-white p-2 my-5 m-auto"
       style="width: 35%"
@@ -58,39 +29,6 @@
       </p>
 
       <a href="#form"><span>saiba mais</span></a>
-=======
-    <div class="highlights-container w-100 d-flex my-5 mx-auto">
-      <div
-        class="highlights-content text-white p-2 my-5 m-auto"
-        style="width: 35%"
-      >
-        <h1>Mars Missons</h1>
-        <p>
-          Follow every step of the Perseverance and Curiosity robots as they
-          explore the red planet
-        </p>
-
-        <a class="text-white" href="#"><span>lear more</span></a>
-      </div>
-
-      <div class="highlights-images w-50 my-5">
-        <img
-          class="w-100"
-          style="max-width: 678px"
-          alt="Banner image"
-          :src="missions.url"
-        />
-
-        <div>
-          <img
-            class="w-100"
-            style="max-width: 678px"
-            alt="Banner image"
-            :src="missions.url"
-          />
-        </div>
-      </div>
->>>>>>> Stashed changes:src/components/CardsHighlightsComponent.vue
     </div>
   </div>
 </template>
@@ -191,13 +129,8 @@ export default {
 .highlights-images div img {
   position: relative;
   border-radius: 16px;
-<<<<<<< Updated upstream:src/components/HighlightsComponent.vue
   top: -176px;
   left: -20px;
-=======
-  top: -132px;
-  left: 140px;
->>>>>>> Stashed changes:src/components/CardsHighlightsComponent.vue
   transition-duration: 1s;
   transition-delay: 0.2s;
 
@@ -207,7 +140,6 @@ export default {
 }
 
 .highlights-images div img:hover {
-<<<<<<< Updated upstream:src/components/HighlightsComponent.vue
   top: -160px;
   left: -12px;
 }
@@ -249,9 +181,4 @@ export default {
     margin-left: 4rem;
   }
 }
-=======
-  top: -152px;
-  left: 44px;
-}
->>>>>>> Stashed changes:src/components/CardsHighlightsComponent.vue
 </style>
