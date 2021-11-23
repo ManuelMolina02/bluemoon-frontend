@@ -19,7 +19,7 @@
 
 ### Se deseja apenas conhecer o projeto visualmente:
 
- - Basta clicar neste [link!](https://bluemoon.vercel.app/#/)
+ - Basta clicar neste [link!](https://bluemoon-v1.vercel.app/#/)
 
 ### Se quer instalar localmente em sua máquina:
 
