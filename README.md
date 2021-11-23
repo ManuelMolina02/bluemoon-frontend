@@ -3,7 +3,7 @@
 
 ## 🔭 Sobre o desafio
 
-  Neste desafio desenvolvi uma landing page que demonstra um produto, onde a proposta é apresentar de uma maneira simples e interativa uma plataforma que divulga artigos sobre o universo.  
+  Neste projeto desenvolvi uma landing page que demonstra um produto, onde a proposta é apresentar de uma maneira simples e interativa uma plataforma que divulga artigos sobre o universo.  
 
 
 
@@ -19,7 +19,7 @@
 
 ### Se deseja apenas conhecer o projeto visualmente:
 
- - Basta clicar neste [link!](https://bluemoon-frontend.vercel.app/#/)
+ - Basta clicar neste [link!](https://bluemoon.vercel.app/#/)
 
 ### Se quer instalar localmente em sua máquina:
 

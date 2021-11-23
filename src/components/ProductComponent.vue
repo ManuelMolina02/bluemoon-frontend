@@ -81,18 +81,16 @@ export default {
   name: 'ProductComponent',
   data() {
     return {
-      missions: {
-        copyright: 'CARA Project',
-        date: '2021-09-10',
-        explanation:
-          'Follow every step of the Perseverance and Curiosity robots as they explore the red planet',
-        hdurl:
-          'https://apod.nasa.gov/apod/image/2109/GalaxySkyMirror_Egon_960.jpg',
-        media_type: 'image',
-        service_version: 'v1',
-        title: 'Missions Mars',
-        url: 'https://apod.nasa.gov/apod/image/2109/AuroraIceland_Necchi_1280.jpg',
-      },
+      missions: {},
+    };
+  },
+
+  created() {
+    this.missions = {
+
+      url: 'https://apod.nasa.gov/apod/image/2109/AuroraIceland_Necchi_1280.jpg',
+      media_type: 'image',
+      service_version: 'v1',
     };
   },
 };

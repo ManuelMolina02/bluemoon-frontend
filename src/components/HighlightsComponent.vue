@@ -22,11 +22,8 @@
       class="highlights-content text-white p-2 my-5 m-auto"
       style="width: 35%"
     >
-      <h1 class="text-start" style="color: #e4eaf5">Missões em Marte</h1>
-      <p style="color: #d2e1ff">
-        Siga cada passo dos robôs Perseverance e Curiosity na jornada de
-        exploração no planeta vermelho.
-      </p>
+      <h1 class="text-start" style="color: #e4eaf5">{{missions.title}}</h1>
+      <p style="color: #d2e1ff"> {{missions.explanation}} </p>
 
       <a href="#form"><span>saiba mais</span></a>
     </div>
@@ -34,23 +31,22 @@
 </template>
 
 <script>
-
 export default {
   name: 'HighlightsComponent',
   data() {
     return {
-      missions: {
-        copyright: 'CARA Project',
-        date: '2021-09-10',
-        explanation:
-          'Follow every step of the Perseverance and Curiosity robots as they explore the red planet',
-        hdurl: 'https://apod.nasa.gov/apod/image/2109/67P_210907.jpg',
-        media_type: 'image',
-        service_version: 'v1',
-        title: 'Missions Mars',
-        url: 'https://apod.nasa.gov/apod/image/2108/PIA24767.jpg',
-      },
+      missions: {},
+    };
+  },
 
+  created() {
+    this.missions = {
+      title: 'Missões em Marte',
+      explanation:
+          'Siga cada passo dos robôs Perseverance e Curiosity na jornada de exploração no planeta vermelho.',
+      url: 'https://apod.nasa.gov/apod/image/2108/PIA24767.jpg',
+      media_type: 'image',
+      service_version: 'v1',
     };
   },
 
@@ -179,6 +175,12 @@ export default {
   .highlights-images {
     width: 90% !important;
     margin-left: 4rem;
+  }
+
+  .highlights-content a {
+    width: 244px;
+    height: 74px;
+    font-size: 1.6rem;
   }
 }
 </style>

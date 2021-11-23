@@ -77,6 +77,7 @@ export default {
 .sidebar-bg {
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 10;
   width: 100vw;
   height: 100vh;
@@ -131,5 +132,12 @@ export default {
 .slide-fade-enter-active,
 .slide-fade-leave-active {
   transition: all 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 380px) {
+  .menu {
+    margin: 36px 12px;
+  }
+
 }
 </style>

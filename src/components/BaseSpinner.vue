@@ -56,7 +56,7 @@ export default {
 }
 
 .logo {
-  width: 100px;
+  width: 100px !important;
   animation: spin 2s linear infinite;
   opacity: 0.8;
 }
@@ -70,6 +70,21 @@ export default {
 
 .opacity-leave-active {
   transition: all 1s ease-in-out;
+}
+
+@media screen and (max-width: 500px) {
+.base-spinner {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+  width: 160px !important;
+}
+.text-logo{
+  width: 70%;
+}
+
 }
 
 @keyframes slide {

@@ -11,7 +11,7 @@
 
       <!-- text logo -->
       <img
-        class="mx-2"
+        class="mx-2 bluemoon-text"
         src="../assets/bluemoon.svg"
         style="width: 232px; opacity: 0.91"
         alt="text-logo"
@@ -21,7 +21,7 @@
     <div class="banner-container">
       <div class="background-image">
         <img
-          src="https://img.wallpapersafari.com/tablet/2560/1700/29/66/MKlOHz.jpg"
+          :src="dataBanner.image"
           alt="banner-background"
         />
       </div>
@@ -30,9 +30,7 @@
     <div class="banner-content" alt="conteúdo banner home">
       <h1>DESCUBRA O <br />COSMOS!</h1>
       <p class="text-white">
-        A cada dia, uma imagem ou fotografia diferente de nosso fascinante
-        universo é apresentada, junto com uma breve explicação escrita por um
-        astrônomo profissional.
+        {{dataBanner.description}}
       </p>
     </div>
   </div>
@@ -41,6 +39,19 @@
 <script>
 export default {
   name: 'Banner',
+
+  data() {
+    return {
+      dataBanner: {},
+    };
+  },
+
+  created() {
+    this.dataBanner = {
+      description: 'A cada dia, uma imagem ou fotografia diferente de nosso fascinante universo é apresentada, junto com uma breve explicação escrita por um astrônomo profissional.',
+      image: 'https://img.wallpapersafari.com/tablet/2560/1700/29/66/MKlOHz.jpg',
+    };
+  },
 };
 </script>
 
@@ -148,6 +159,14 @@ export default {
   }
   .banner-content p {
     font-size: 22px;
+  }
+
+    .logo{
+    margin: 2.4rem .8rem;
+  }
+
+  .bluemoon-text{
+    width: 182px !important;
   }
 }
 @media screen and (max-width: 320px) {

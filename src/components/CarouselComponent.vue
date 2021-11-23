@@ -14,7 +14,7 @@
         v-for="mission in missionsOne"
         :key="mission.title"
       >
-        <img :src="mission.url" class="carousel-img" alt="image-gallery"/>
+        <img :src="mission.url" class="carousel-img" alt="image-gallery" />
       </div>
     </b-carousel>
 
@@ -32,7 +32,7 @@
         v-for="mission in missionsTwo"
         :key="mission.title"
       >
-        <img :src="mission.url" class="carousel-img" alt="image-gallery"/>
+        <img :src="mission.url" class="carousel-img" alt="image-gallery" />
       </div>
     </b-carousel>
 
@@ -50,7 +50,7 @@
         v-for="mission in missionsTree"
         :key="mission.title"
       >
-        <img :src="mission.url" class="carousel-img" alt="image-gallery"/>
+        <img :src="mission.url" class="carousel-img" alt="image-gallery" />
       </div>
     </b-carousel>
 
@@ -69,11 +69,7 @@
       ok-title="Close"
     >
       <!-- :modal-class="(maxHeight = 80 % !important)" -->
-      <div
-        class="mb-4"
-        v-for="mission in missionsOne"
-        :key="mission.missionsOne"
-      >
+      <div class="mb-4" v-for="mission in missionsOne" :key="mission.missionsOne">
         <b-card class="my-3 text-white bg-dark" alt="image-modal" :img-src="mission.url" img-top>
           <b-card-text class="card-text">
             <h3>{{ mission.title }}</h3>
@@ -98,11 +94,7 @@
       ok-title="Close"
     >
       <!-- :modal-class="(maxHeight = 80 % !important)" -->
-      <div
-        class="mb-4"
-        v-for="mission in missionsTwo"
-        :key="mission.missionsTwo"
-      >
+      <div class="mb-4" v-for="mission in missionsTwo" :key="mission.missionsTwo">
         <b-card class="my-3 text-white bg-dark" alt="image-modal" :img-src="mission.url" img-top>
           <b-card-text class="card-text">
             <h3>{{ mission.title }}</h3>
@@ -127,11 +119,7 @@
       ok-title="Close"
     >
       <!-- :modal-class="(maxHeight = 80 % !important)" -->
-      <div
-        class="mb-4"
-        v-for="mission in missionsTree"
-        :key="mission.missionsTree"
-      >
+      <div class="mb-4" v-for="mission in missionsTree" :key="mission.missionsTree">
         <b-card class="my-3 text-white bg-dark" alt="image-modal" :img-src="mission.url" img-top>
           <div class="card-text">
             <h3>{{ mission.title }}</h3>
@@ -186,7 +174,7 @@ export default {
 
       .then((response) => {
         this.missionsTree = response.data;
-        console.log(this.missionsTree);
+        // console.log(this.missionsTree);
       })
       .catch((error) => {
         console.error(error);
@@ -194,10 +182,8 @@ export default {
   },
 };
 </script>
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-/* CAROUSEL CONTAINER */
 
+<style scoped>
 .carousel-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;

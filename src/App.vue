@@ -24,6 +24,7 @@
           <a
             href="https://www.instagram.com/manuuelmolinaa/"
             class="me-3 text-reset"
+            target="_blank"
           >
             <b-icon
               icon="instagram"
@@ -32,18 +33,20 @@
             ></b-icon>
           </a>
 
-          <a href="https://github.com/ManuelMolina02" class="me-3 text-reset">
+          <a href="https://github.com/ManuelMolina02" class="me-3 text-reset" target="_blank">
             <b-icon icon="github" font-scale="3" class="icon-contact"></b-icon>
           </a>
 
           <a
             href="https://www.linkedin.com/in/manuel-angel-berger-molina-ba08b3174/"
             class="me-3 text-reset"
+            target="_blank"
           >
             <b-icon
               icon="linkedin"
               font-scale="3"
               class="icon-contact"
+              target="_blank"
             ></b-icon>
           </a>
         </div>
@@ -67,15 +70,15 @@
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
               <h6 class="text-uppercase fw-bold mb-4">tecnologias</h6>
               <p>
-                <a href="https://vuejs.org/" class="text-reset">Vue</a>
+                <a href="https://vuejs.org/" class="text-reset" target="_blank">Vue</a>
               </p>
               <p>
-                <a href="https://bootstrap-vue.org/" class="text-reset"
+                <a href="https://bootstrap-vue.org/" class="text-reset" target="_blank"
                   >Bootstrap-vue</a
                 >
               </p>
               <p>
-                <a href="https://axios-http.com/" class="text-reset">Axios</a>
+                <a href="https://axios-http.com/" class="text-reset" target="_blank">Axios</a>
               </p>
             </div>
 
@@ -125,6 +128,13 @@ export default {
     BaseSpinner,
   },
 
+  props: {
+    title: String,
+  },
+  created() {
+    console.log(this.title);
+  },
+
   mounted() {
     setTimeout(() => {
       this.$root.$emit('Spinner::hide');
@@ -141,8 +151,7 @@ export default {
   position: relative;
   z-index: 3;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  width: 95vw !important;
   align-items: center;
   margin: 1.4rem;
 }
